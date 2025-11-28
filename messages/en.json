@@ -1,0 +1,32 @@
+{
+  "common": {
+    "appName": "Dienstplan App",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Dienstplan App",
+    "subtitle": "The modern solution for your shift planning",
+    "description": "Manage your shifts easily and efficiently. The Dienstplan App helps you keep track of your working hours.",
+    "download": "Download now",
+    "availableOn": "Available on"
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "support": "Support"
+  },
+  "imprint": {
+    "title": "Imprint",
+    "content": "Here you will find the legal information about the Dienstplan App."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "content": "Here you will find our privacy policy."
+  },
+  "support": {
+    "title": "Support",
+    "content": "If you have any questions or problems, please feel free to contact us.",
+    "contact": "Contact"
+  }
+}
+

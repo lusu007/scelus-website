@@ -1,0 +1,32 @@
+{
+  "common": {
+    "appName": "Dienstplan App",
+    "language": "Sprache"
+  },
+  "home": {
+    "title": "Dienstplan App",
+    "subtitle": "Die moderne Lösung für Ihre Dienstplanung",
+    "description": "Verwalten Sie Ihre Schichten einfach und effizient. Die Dienstplan App hilft Ihnen dabei, Ihre Arbeitszeiten im Blick zu behalten.",
+    "download": "Jetzt herunterladen",
+    "availableOn": "Verfügbar für"
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "support": "Support"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "content": "Hier finden Sie die rechtlichen Informationen zur Dienstplan App."
+  },
+  "privacy": {
+    "title": "Datenschutz",
+    "content": "Hier finden Sie unsere Datenschutzerklärung."
+  },
+  "support": {
+    "title": "Support",
+    "content": "Bei Fragen oder Problemen können Sie uns gerne kontaktieren.",
+    "contact": "Kontakt"
+  }
+}
+
