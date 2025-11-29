@@ -25,7 +25,7 @@ export default async function LocaleLayout({
 
   return (
     <div className="flex min-h-screen flex-col bg-white dark:bg-gray-900">
-      <main className="flex-grow">{children}</main>
+      <main className="grow">{children}</main>
       <Footer locale={locale} translations={t} />
     </div>
   );

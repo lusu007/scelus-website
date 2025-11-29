@@ -32,7 +32,7 @@ export default async function HomePage({ params }: PageProps) {
             src="/hero-background.jpeg"
             alt=""
             fill
-            className="object-cover opacity-30 blur-[24px]"
+            className="object-cover opacity-30 blur-xl"
             priority
           />
         </div>

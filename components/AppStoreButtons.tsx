@@ -28,11 +28,11 @@ export default function AppStoreButtons({
         href={iosUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex h-16 w-44 items-center gap-3 overflow-hidden rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900/90 to-black/90 px-4 text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-primary-light/50 hover:shadow-xl hover:shadow-primary-light/20 focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
+        className="group relative flex h-16 w-44 items-center gap-3 overflow-hidden rounded-xl border border-gray-800/50 bg-linear-to-br from-gray-900/90 to-black/90 px-4 text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-primary-light/50 hover:shadow-xl hover:shadow-primary-light/20 focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
         aria-label={translations.ariaLabel}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-light/0 to-primary-dark/0 transition-all duration-300 group-hover:from-primary-light/10 group-hover:to-primary-dark/10" />
-        <SiAppstore className="relative z-10 h-9 w-9 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+        <div className="absolute inset-0 bg-linear-to-br from-primary-light/0 to-primary-dark/0 transition-all duration-300 group-hover:from-primary-light/10 group-hover:to-primary-dark/10" />
+        <SiAppstore className="relative z-10 h-9 w-9 shrink-0 transition-transform duration-300 group-hover:scale-110" />
         <div className="relative z-10 flex flex-col">
           <span className="text-[10px] font-medium leading-tight text-gray-300">{translations.downloadOn}</span>
           <span className="text-base font-bold leading-tight">{translations.appStore}</span>
@@ -42,11 +42,11 @@ export default function AppStoreButtons({
         href={androidUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex h-16 w-44 items-center gap-3 overflow-hidden rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-900/90 to-black/90 px-4 text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-primary-light/50 hover:shadow-xl hover:shadow-primary-light/20 focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
+        className="group relative flex h-16 w-44 items-center gap-3 overflow-hidden rounded-xl border border-gray-800/50 bg-linear-to-br from-gray-900/90 to-black/90 px-4 text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-primary-light/50 hover:shadow-xl hover:shadow-primary-light/20 focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900"
         aria-label={translations.ariaLabelGoogle}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-light/0 to-primary-dark/0 transition-all duration-300 group-hover:from-primary-light/10 group-hover:to-primary-dark/10" />
-        <SiGoogleplay className="relative z-10 h-9 w-9 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+        <div className="absolute inset-0 bg-linear-to-br from-primary-light/0 to-primary-dark/0 transition-all duration-300 group-hover:from-primary-light/10 group-hover:to-primary-dark/10" />
+        <SiGoogleplay className="relative z-10 h-9 w-9 shrink-0 transition-transform duration-300 group-hover:scale-110" />
         <div className="relative z-10 flex flex-col">
           <span className="text-[10px] font-medium leading-tight text-gray-300">{translations.getItOn}</span>
           <span className="text-base font-bold leading-tight">{translations.googlePlay}</span>

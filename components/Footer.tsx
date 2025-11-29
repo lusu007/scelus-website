@@ -23,7 +23,7 @@ export default function Footer({ locale, translations }: FooterProps) {
   const copyrightText = translations.footer.copyright.replace('{year}', currentYear.toString());
 
   return (
-    <footer className="relative w-full bg-gradient-to-b from-gray-900 via-gray-900 to-gray-950">
+    <footer className="relative w-full bg-linear-to-b from-gray-900 via-gray-900 to-gray-950">
       <div className="mx-auto w-full max-w-7xl px-6 py-20 sm:py-24 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left column: Logo, description, GitHub */}

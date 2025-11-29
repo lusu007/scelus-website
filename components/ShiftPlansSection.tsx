@@ -81,9 +81,9 @@ export default function ShiftPlansSection({ locale, translations }: ShiftPlansSe
         {filteredPlans.map((plan) => (
           <div
             key={plan.id}
-            className="group relative overflow-hidden rounded-xl border border-gray-800/50 bg-gradient-to-br from-gray-800/40 to-gray-900/60 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:border-primary-light/50 hover:shadow-xl hover:shadow-primary-light/10"
+            className="group relative overflow-hidden rounded-xl border border-gray-800/50 bg-linear-to-br from-gray-800/40 to-gray-900/60 p-8 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:border-primary-light/50 hover:shadow-xl hover:shadow-primary-light/10"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-light/0 to-primary-dark/0 transition-all duration-300 group-hover:from-primary-light/5 group-hover:to-primary-dark/10" />
+            <div className="absolute inset-0 bg-linear-to-br from-primary-light/0 to-primary-dark/0 transition-all duration-300 group-hover:from-primary-light/5 group-hover:to-primary-dark/10" />
             <div className="relative">
               <h3 className="mb-1 text-xl font-bold tracking-tight text-white">
                 {plan.title}
