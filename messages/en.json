@@ -1,7 +1,9 @@
 {
   "common": {
     "appName": "Dienstplan - Polizei",
-    "language": "Language"
+    "language": "Language",
+    "metaTitle": "Dienstplan - Polizei",
+    "metaDescription": "The modern solution for your shift planning"
   },
   "home": {
     "title": "Dienstplan - Polizei",
