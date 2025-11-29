@@ -1,23 +1,39 @@
 {
   "common": {
-    "appName": "Dienstplan App",
+    "appName": "Dienstplan - Polizei",
     "language": "Sprache"
   },
   "home": {
-    "title": "Dienstplan App",
-    "subtitle": "Die moderne Lösung für Ihre Dienstplanung",
-    "description": "Verwalten Sie Ihre Schichten einfach und effizient. Die Dienstplan App hilft Ihnen dabei, Ihre Arbeitszeiten im Blick zu behalten.",
+    "title": "Dienstplan - Polizei",
+    "subtitle": "Die moderne Lösung für deine Dienstplanung",
+    "description": "Verwalte deine Schichten einfach und effizient. Die Dienstplan - Polizei hilft dir dabei, deine Arbeitszeiten im Blick zu behalten.",
+    "features": {
+      "title": "Features",
+      "subtitle": "Alles was du für deine Dienstplanung brauchst",
+      "partnerShiftsTitle": "Partner:in Schichten",
+      "partnerShifts": "Synchronisiere deine Schichten mit denen deiner Partner:in und sehe auf einen Blick, wann ihr zusammen Zeit habt.",
+      "holidaysTitle": "Ferien",
+      "holidays": "Verwalte Ferien, Urlaubstage und Feiertage übersichtlich und erkenne frühzeitig Konflikte mit deinen Schichten.",
+      "colorCustomizationTitle": "Farbanpassung",
+      "colorCustomization": "Passe die Farben für verschiedene Schichttypen an, um deinen Dienstplan auf einen Blick besser erfassen zu können."
+    },
     "download": "Jetzt herunterladen",
-    "availableOn": "Verfügbar für"
+    "availableOn": "Verfügbar für",
+    "availablePlans": {
+      "title": "Verfügbare Dienstpläne"
+    }
   },
   "footer": {
+    "description": "Die moderne Lösung für deine Dienstplanung. Verwalte deine Schichten einfach und effizient.",
+    "support": "Support",
+    "legal": "Rechtliches",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
-    "support": "Support"
+    "copyright": "© {year} Scelus Development. Alle Rechte vorbehalten."
   },
   "imprint": {
     "title": "Impressum",
-    "content": "Hier finden Sie die rechtlichen Informationen zur Dienstplan App."
+    "content": "Hier finden Sie die rechtlichen Informationen zur Dienstplan - Polizei."
   },
   "privacy": {
     "title": "Datenschutz",

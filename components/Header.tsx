@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+'use client';
+
 import LanguageSwitcher from './LanguageSwitcher';
 
 type Translations = {
@@ -11,28 +11,28 @@ type Translations = {
 type HeaderProps = {
   locale: string;
   translations: Translations;
+  variant?: 'default' | 'hero';
 };
 
-export default function Header({ locale, translations }: HeaderProps) {
+export default function Header({ locale, translations, variant = 'default' }: HeaderProps) {
+  const isHero = variant === 'hero';
+  
   return (
-    <header className="bg-white shadow-sm">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <Link href={`/${locale}`} className="flex items-center">
-            <Image
-              src="/Logo.svg"
-              alt={translations.common.appName}
-              width={48}
-              height={48}
-              className="h-12 w-12"
-            />
-            <span className="ml-3 text-xl font-semibold text-primary-dark">
-              {translations.common.appName}
-            </span>
-          </Link>
-          <LanguageSwitcher currentLocale={locale} />
+    <header 
+      className={
+        isHero
+          ? 'absolute inset-x-0 top-0 z-50'
+          : 'relative z-50 bg-white shadow-sm dark:bg-gray-900 dark:shadow-gray-800'
+      }
+    >
+      <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
+        <div className="flex lg:flex-1"></div>
+        <div className="flex lg:flex-1 lg:justify-end">
+          <div className="relative z-10 flex items-center gap-4">
+            <LanguageSwitcher currentLocale={locale} variant={isHero ? 'hero' : 'default'} />
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
   );
 }

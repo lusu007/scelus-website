@@ -24,8 +24,7 @@ export default async function LocaleLayout({
   const t = getTranslations(locale as any);
 
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header locale={locale} translations={t} />
+    <div className="flex min-h-screen flex-col bg-white dark:bg-gray-900">
       <main className="flex-grow">{children}</main>
       <Footer locale={locale} translations={t} />
     </div>

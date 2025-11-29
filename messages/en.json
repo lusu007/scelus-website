@@ -1,23 +1,39 @@
 {
   "common": {
-    "appName": "Dienstplan App",
+    "appName": "Dienstplan - Polizei",
     "language": "Language"
   },
   "home": {
-    "title": "Dienstplan App",
+    "title": "Dienstplan - Polizei",
     "subtitle": "The modern solution for your shift planning",
-    "description": "Manage your shifts easily and efficiently. The Dienstplan App helps you keep track of your working hours.",
+    "description": "Manage your shifts easily and efficiently. The Dienstplan - Polizei helps you keep track of your working hours.",
+    "features": {
+      "title": "Features",
+      "subtitle": "Everything you need for your shift planning",
+      "partnerShiftsTitle": "Partner Shifts",
+      "partnerShifts": "Synchronize your shifts with your partner's and see at a glance when you have time together.",
+      "holidaysTitle": "Holidays",
+      "holidays": "Manage holidays, vacation days, and public holidays clearly and identify conflicts with your shifts early.",
+      "colorCustomizationTitle": "Color Customization",
+      "colorCustomization": "Customize colors for different shift types to better understand your schedule at a glance."
+    },
     "download": "Download now",
-    "availableOn": "Available on"
+    "availableOn": "Available on",
+    "availablePlans": {
+      "title": "Available Shift Plans"
+    }
   },
   "footer": {
+    "description": "The modern solution for your shift planning. Manage your shifts easily and efficiently.",
+    "support": "Support",
+    "legal": "Legal",
     "imprint": "Imprint",
     "privacy": "Privacy Policy",
-    "support": "Support"
+    "copyright": "© {year} Scelus Development. All rights reserved."
   },
   "imprint": {
     "title": "Imprint",
-    "content": "Here you will find the legal information about the Dienstplan App."
+    "content": "Here you will find the legal information about the Dienstplan - Polizei."
   },
   "privacy": {
     "title": "Privacy Policy",

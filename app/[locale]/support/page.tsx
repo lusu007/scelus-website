@@ -1,6 +1,7 @@
 import { getTranslations } from '@/i18n/translations';
 import { Locale } from '@/i18n/config';
 import ContactForm from '@/components/ContactForm';
+import Header from '@/components/Header';
 
 type PageProps = {
   params: Promise<{ locale: Locale }>;
@@ -16,8 +17,8 @@ export default async function SupportPage({ params }: PageProps) {
 
   const content = {
     de: {
-      title: 'Support für die Dienstplan App',
-      description: 'Bei Fragen oder Problemen mit der Dienstplan App können Sie uns gerne kontaktieren. Füllen Sie einfach das Formular aus und wir melden uns schnellstmöglich bei Ihnen.',
+      title: 'Support für die Dienstplan - Polizei',
+      description: 'Bei Fragen oder Problemen mit der Dienstplan - Polizei können Sie uns gerne kontaktieren. Füllen Sie einfach das Formular aus und wir melden uns schnellstmöglich bei Ihnen.',
       form: {
         name: 'Name',
         email: 'E-Mail',
@@ -35,8 +36,8 @@ export default async function SupportPage({ params }: PageProps) {
       },
     },
     en: {
-      title: 'Support for the Dienstplan App',
-      description: 'If you have questions or issues with the Dienstplan App, please feel free to contact us. Simply fill out the form below and we will get back to you as soon as possible.',
+      title: 'Support for the Dienstplan - Polizei',
+      description: 'If you have questions or issues with the Dienstplan - Polizei, please feel free to contact us. Simply fill out the form below and we will get back to you as soon as possible.',
       form: {
         name: 'Name',
         email: 'Email',
@@ -59,6 +60,7 @@ export default async function SupportPage({ params }: PageProps) {
 
   return (
     <div className="bg-white">
+      <Header locale={locale} translations={t} />
       <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-primary-dark">
           {c.title}
