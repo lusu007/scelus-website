@@ -55,7 +55,7 @@ export default async function HomePage({ params }: PageProps) {
             <p className="mt-8 text-lg font-medium text-pretty text-gray-600 dark:text-gray-400 sm:text-xl/8">
               {t.home.subtitle}
             </p>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-gray-600 dark:text-gray-400">
+            <p className="mx-auto mt-4 max-w-2xl text-base text-gray-600 dark:text-gray-400 hidden sm:block">
               {t.home.description}
             </p>
             <div className="mt-10">
