@@ -22,7 +22,7 @@ export default async function HomePage({ params }: PageProps) {
     <div className="bg-white dark:bg-gray-900">
       {/* Hero Section */}
       <div className="relative isolate bg-gray-50 dark:bg-gray-900 px-6 pt-14 lg:px-8">
-        <Header locale={locale} translations={t} variant="hero" />
+        <Header locale={locale} translations={t} variant="hero" showLogo={false} />
         {/* Background image */}
         <div
           aria-hidden="true"
@@ -62,7 +62,7 @@ export default async function HomePage({ params }: PageProps) {
               <p className="mb-6 text-sm font-medium text-gray-700 dark:text-gray-300">
                 {t.home.availableOn}
               </p>
-              <AppStoreButtons />
+              <AppStoreButtons translations={t.home.appStore} />
             </div>
           </div>
         </div>
@@ -126,45 +126,15 @@ export default async function HomePage({ params }: PageProps) {
               {t.home.availablePlans.title}
             </h2>
             <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl lg:text-balance">
-              Vorgefertigte Dienstpläne für verschiedene Bereiche
+              {t.home.availablePlans.subtitle}
             </p>
             <p className="mt-6 text-lg/8 text-gray-300">
-              Wähle aus einer Vielzahl von vorgefertigten Dienstplänen oder erstelle deinen eigenen.
+              {t.home.availablePlans.description}
             </p>
           </div>
           <ShiftPlansSection
-            plans={[
-              {
-                id: '1',
-                title: 'Polizeirevier Lehe/Geestemünde',
-                authority: 'Polizei Bremerhaven',
-                description: '5-wöchiger Rotationsplan für das Polizeirevier Lehe und Geestemünde der OPB Bremenhaven',
-              },
-              {
-                id: '2',
-                title: 'Bereitschaftspolizei Züge',
-                authority: 'Polizei Bremen',
-                description: 'Rotationsplan für die Züge der Bereitschaftspolizei der Polizei Bremen',
-              },
-              {
-                id: '3',
-                title: '2-Schichtplan 5-Tage',
-                authority: 'Allgemein',
-                description: 'Zwei-Schicht Wochenplan mit Früh- und Spätdienst, Montag bis Freitag',
-              },
-              {
-                id: '4',
-                title: 'Einsatz- und Streifendienst',
-                authority: 'Polizei Bremen',
-                description: '5-wöchiger Rotationsplan für den Einsatz- und Streifendienst der Polizei Bremen',
-              },
-              {
-                id: '5',
-                title: 'Polizeirevier Leherheide',
-                authority: 'Polizei Bremerhaven',
-                description: '3-wöchiger Rotationsplan für das Polizeirevier Leherheide der OPB Bremenhaven',
-              },
-            ]}
+            locale={locale}
+            translations={t.home.availablePlans}
           />
         </div>
       </div>

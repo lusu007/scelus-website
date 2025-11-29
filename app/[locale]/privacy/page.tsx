@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations } from '@/i18n/translations';
 import { Locale } from '@/i18n/config';
 import Link from 'next/link';
@@ -175,122 +176,147 @@ export default async function PrivacyPage({ params }: PageProps) {
   const c = content[locale];
 
   return (
-    <div className="bg-white">
-      <Header locale={locale} translations={t} />
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-primary-dark">
-          {t.privacy.title}
-        </h1>
-        <p className="mt-2 text-sm text-gray-600">
-          <strong>{c.lastUpdated}</strong>
-        </p>
-        <div className="mt-8 space-y-6 text-gray-700">
-          <p className="leading-relaxed">{c.intro}</p>
+    <div className="bg-white dark:bg-gray-900">
+      {/* Hero Section */}
+      <div className="relative isolate bg-gray-50 dark:bg-gray-900 px-6 pt-14 lg:px-8">
+        <Header locale={locale} translations={t} variant="hero" />
+        {/* Background image */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-10"
+        >
+          <Image
+            src="/hero-background.jpeg"
+            alt=""
+            fill
+            className="object-cover opacity-30 blur-[24px]"
+            priority
+          />
+        </div>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.responsible.title}
-            </h2>
-            <p>
-              <strong>{c.responsible.name}</strong>
-              <br />
-              {c.responsible.address}
-              <br />
-              {c.responsible.city}
-              <br />
-              E-Mail: <Link href={`mailto:${c.responsible.email}`} className="text-primary-light hover:underline">{c.responsible.email}</Link>
+        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
+          <div className="text-center">
+            <h1 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 dark:text-white sm:text-5xl">
+              {t.privacy.title}
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-base font-medium text-pretty text-gray-600 dark:text-gray-400 sm:text-lg">
+              <strong>{c.lastUpdated}</strong>
             </p>
-          </section>
+          </div>
+        </div>
+      </div>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.dataTypes.title}
-            </h2>
-            <p className="mb-3 leading-relaxed">{c.dataTypes.main}</p>
-            <p className="mb-2">{c.dataTypes.optional}</p>
-            <ul className="ml-6 list-disc space-y-1">
-              {c.dataTypes.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </section>
+      {/* Content Section */}
+      <div className="bg-gray-900 dark:bg-gray-900 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl space-y-6 text-gray-300">
+            <p className="leading-relaxed">{c.intro}</p>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.purpose.title}
-            </h2>
-            <p className="mb-2">{c.purpose.main}</p>
-            <ul className="ml-6 list-disc space-y-1">
-              {c.purpose.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </section>
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.responsible.title}
+              </h2>
+              <p className="leading-relaxed">
+                <strong>{c.responsible.name}</strong>
+                <br />
+                {c.responsible.address}
+                <br />
+                {c.responsible.city}
+                <br />
+                E-Mail: <Link href={`mailto:${c.responsible.email}`} className="text-primary-light hover:underline">{c.responsible.email}</Link>
+              </p>
+            </section>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.legalBasis.title}
-            </h2>
-            <p className="leading-relaxed">{c.legalBasis.text}</p>
-          </section>
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.dataTypes.title}
+              </h2>
+              <p className="mb-3 leading-relaxed">{c.dataTypes.main}</p>
+              <p className="mb-2">{c.dataTypes.optional}</p>
+              <ul className="ml-6 list-disc space-y-1">
+                {c.dataTypes.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </section>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.permissions.title}
-            </h2>
-            <p className="mb-2">{c.permissions.main}</p>
-            <ul className="ml-6 list-disc space-y-1">
-              {c.permissions.items.map((item, index) => {
-                const parts = item.split(':');
-                return (
-                  <li key={index}>
-                    <strong>{parts[0]}:</strong> {parts.slice(1).join(':')}
-                  </li>
-                );
-              })}
-            </ul>
-            <p className="mt-3 leading-relaxed">{c.permissions.note}</p>
-          </section>
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.purpose.title}
+              </h2>
+              <p className="mb-2">{c.purpose.main}</p>
+              <ul className="ml-6 list-disc space-y-1">
+                {c.purpose.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </section>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.noSharing.title}
-            </h2>
-            <p className="leading-relaxed">{c.noSharing.text}</p>
-          </section>
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.legalBasis.title}
+              </h2>
+              <p className="leading-relaxed">{c.legalBasis.text}</p>
+            </section>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.thirdParty.title}
-            </h2>
-            <p className="mb-2">{c.thirdParty.main}</p>
-            <ul className="ml-6 list-disc space-y-1">
-              {c.thirdParty.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-            <p className="mt-3 leading-relaxed">{c.thirdParty.note}</p>
-          </section>
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.permissions.title}
+              </h2>
+              <p className="mb-2">{c.permissions.main}</p>
+              <ul className="ml-6 list-disc space-y-1">
+                {c.permissions.items.map((item, index) => {
+                  const parts = item.split(':');
+                  return (
+                    <li key={index}>
+                      <strong>{parts[0]}:</strong> {parts.slice(1).join(':')}
+                    </li>
+                  );
+                })}
+              </ul>
+              <p className="mt-3 leading-relaxed">{c.permissions.note}</p>
+            </section>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.rights.title}
-            </h2>
-            <p className="mb-2">{c.rights.main}</p>
-            <ul className="ml-6 list-disc space-y-1">
-              {c.rights.items.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-            <p className="mt-3 leading-relaxed">{c.rights.note}</p>
-          </section>
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.noSharing.title}
+              </h2>
+              <p className="leading-relaxed">{c.noSharing.text}</p>
+            </section>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.changes.title}
-            </h2>
-            <p className="leading-relaxed">{c.changes.text}</p>
-          </section>
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.thirdParty.title}
+              </h2>
+              <p className="mb-2">{c.thirdParty.main}</p>
+              <ul className="ml-6 list-disc space-y-1">
+                {c.thirdParty.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+              <p className="mt-3 leading-relaxed">{c.thirdParty.note}</p>
+            </section>
+
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.rights.title}
+              </h2>
+              <p className="mb-2">{c.rights.main}</p>
+              <ul className="ml-6 list-disc space-y-1">
+                {c.rights.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+              <p className="mt-3 leading-relaxed">{c.rights.note}</p>
+            </section>
+
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.changes.title}
+              </h2>
+              <p className="leading-relaxed">{c.changes.text}</p>
+            </section>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Locale } from '@/i18n/config';
 
 type ShiftPlan = {
   id: string;
@@ -9,36 +10,70 @@ type ShiftPlan = {
   description: string;
 };
 
-type ShiftPlansSectionProps = {
-  plans: ShiftPlan[];
+type AvailablePlansTranslations = {
+  filters: {
+    all: string;
+    polizeiBremen: string;
+    polizeiBremerhaven: string;
+    general: string;
+  };
+  plans: {
+    [key: string]: {
+      title: string;
+      authority: string;
+      description: string;
+    };
+  };
 };
 
-export default function ShiftPlansSection({ plans }: ShiftPlansSectionProps) {
-  const [activeFilter, setActiveFilter] = useState<string>('Alle');
+type ShiftPlansSectionProps = {
+  locale: Locale;
+  translations: AvailablePlansTranslations;
+};
 
-  const filters = ['Alle', 'Polizei Bremen', 'Polizei Bremerhaven', 'Allgemein'];
+export default function ShiftPlansSection({ locale, translations }: ShiftPlansSectionProps) {
+  const filterKeys = ['all', 'polizeiBremen', 'polizeiBremerhaven', 'general'] as const;
+  
+  const [activeFilterKey, setActiveFilterKey] = useState<string>('all');
 
-  const filteredPlans = activeFilter === 'Alle'
+  const plans = Object.entries(translations.plans).map(([id, plan]) => ({
+    id,
+    ...plan,
+  }));
+
+  const authorityKeyMap: Record<string, string> = {
+    [translations.filters.polizeiBremen]: 'polizeiBremen',
+    [translations.filters.polizeiBremerhaven]: 'polizeiBremerhaven',
+    [translations.filters.general]: 'general',
+  };
+
+  const filteredPlans = activeFilterKey === 'all'
     ? plans
-    : plans.filter((plan) => plan.authority === activeFilter);
+    : plans.filter((plan) => {
+        const planAuthorityKey = authorityKeyMap[plan.authority];
+        return planAuthorityKey === activeFilterKey;
+      });
 
   return (
     <div className="mx-auto mt-16 max-w-7xl sm:mt-20 lg:mt-24">
       {/* Filter Chips */}
       <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
-            className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 ${
-              activeFilter === filter
-                ? 'bg-primary-light text-white shadow-lg shadow-primary-light/20'
-                : 'border border-gray-700 bg-gray-800/40 text-gray-300 hover:border-primary-light/50 hover:bg-gray-800/60 hover:text-white'
-            }`}
-          >
-            {filter}
-          </button>
-        ))}
+        {filterKeys.map((filterKey) => {
+          const filterLabel = translations.filters[filterKey];
+          return (
+            <button
+              key={filterKey}
+              onClick={() => setActiveFilterKey(filterKey)}
+              className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-200 ${
+                activeFilterKey === filterKey
+                  ? 'bg-primary-light text-white shadow-lg shadow-primary-light/20'
+                  : 'border border-gray-700 bg-gray-800/40 text-gray-300 hover:border-primary-light/50 hover:bg-gray-800/60 hover:text-white'
+              }`}
+            >
+              {filterLabel}
+            </button>
+          );
+        })}
       </div>
 
       {/* Filtered Plans Grid */}

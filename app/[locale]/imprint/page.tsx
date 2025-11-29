@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations } from '@/i18n/translations';
 import { Locale } from '@/i18n/config';
 import Link from 'next/link';
@@ -18,6 +19,7 @@ export default async function ImprintPage({ params }: PageProps) {
   const content = {
     de: {
       title: 'Impressum',
+      description: 'Angaben gemäß § 5 TMG und verantwortlich für den Inhalt nach § 55 Abs. 2 RStV.',
       tmg: 'Angaben gemäß § 5 TMG:',
       name: 'Lukas Jost',
       address: 'Kölner Straße 13',
@@ -33,6 +35,7 @@ export default async function ImprintPage({ params }: PageProps) {
     },
     en: {
       title: 'Imprint',
+      description: 'Information according to § 5 TMG and responsible for content according to § 55 para. 2 RStV.',
       tmg: 'Information according to § 5 TMG:',
       name: 'Lukas Jost',
       address: 'Kölner Straße 13',
@@ -51,52 +54,80 @@ export default async function ImprintPage({ params }: PageProps) {
   const c = content[locale];
 
   return (
-    <div className="bg-white">
-      <Header locale={locale} translations={t} />
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-primary-dark">
-          {c.title}
-        </h1>
-        <div className="mt-8 space-y-6 text-gray-700">
-          <section>
-            <p className="mb-3 font-semibold">{c.tmg}</p>
-            <p>
-              {c.name}
-              <br />
-              {c.address}
-              <br />
-              {c.city}
-              <br />
-              {c.country}
+    <div className="bg-white dark:bg-gray-900">
+      {/* Hero Section */}
+      <div className="relative isolate bg-gray-50 dark:bg-gray-900 px-6 pt-14 lg:px-8">
+        <Header locale={locale} translations={t} variant="hero" />
+        {/* Background image */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-10"
+        >
+          <Image
+            src="/hero-background.jpeg"
+            alt=""
+            fill
+            className="object-cover opacity-30 blur-[24px]"
+            priority
+          />
+        </div>
+
+        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
+          <div className="text-center">
+            <h1 className="text-4xl font-semibold tracking-tight text-balance text-gray-900 dark:text-white sm:text-5xl">
+              {c.title}
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-base font-medium text-pretty text-gray-600 dark:text-gray-400 sm:text-lg">
+              {c.description}
             </p>
-          </section>
+          </div>
+        </div>
+      </div>
 
-          <section>
-            <p className="mb-2 font-semibold">{c.contact}</p>
-            <p>
-              E-Mail: <Link href={`mailto:${c.email}`} className="text-primary-light hover:underline">{c.email}</Link>
-            </p>
-          </section>
+      {/* Content Section */}
+      <div className="bg-gray-900 dark:bg-gray-900 py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl space-y-6 text-gray-300">
+            <section>
+              <p className="mb-3 font-semibold text-white">{c.tmg}</p>
+              <p className="leading-relaxed">
+                {c.name}
+                <br />
+                {c.address}
+                <br />
+                {c.city}
+                <br />
+                {c.country}
+              </p>
+            </section>
 
-          <section>
-            <p className="mb-3 font-semibold">{c.responsible}</p>
-            <p>
-              {c.name}
-              <br />
-              {c.address}
-              <br />
-              {c.city}
-            </p>
-          </section>
+            <section>
+              <p className="mb-2 font-semibold text-white">{c.contact}</p>
+              <p className="leading-relaxed">
+                E-Mail: <Link href={`mailto:${c.email}`} className="text-primary-light hover:underline">{c.email}</Link>
+              </p>
+            </section>
 
-          <hr className="my-8 border-gray-300" />
+            <section>
+              <p className="mb-3 font-semibold text-white">{c.responsible}</p>
+              <p className="leading-relaxed">
+                {c.name}
+                <br />
+                {c.address}
+                <br />
+                {c.city}
+              </p>
+            </section>
 
-          <section>
-            <h2 className="mb-3 text-2xl font-semibold text-primary-dark">
-              {c.disclaimer.title}
-            </h2>
-            <p className="leading-relaxed">{c.disclaimer.text}</p>
-          </section>
+            <hr className="my-8 border-gray-700" />
+
+            <section>
+              <h2 className="mb-3 text-2xl font-semibold text-white">
+                {c.disclaimer.title}
+              </h2>
+              <p className="leading-relaxed">{c.disclaimer.text}</p>
+            </section>
+          </div>
         </div>
       </div>
     </div>

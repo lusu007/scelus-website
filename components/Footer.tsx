@@ -33,14 +33,14 @@ export default function Footer({ locale, translations }: FooterProps) {
                 <div className="relative">
                   <Image
                     src="/Logo.svg"
-                    alt="Scelus Development"
+                    alt="Dienstplan - Polizei"
                     width={44}
                     height={44}
                     className="h-11 w-11"
                   />
                 </div>
                 <span className="text-xl font-bold tracking-tight text-white">
-                  Scelus Development
+                  Dienstplan - Polizei
                 </span>
               </div>
               <p className="max-w-md text-base leading-7 text-gray-400 text-balance">

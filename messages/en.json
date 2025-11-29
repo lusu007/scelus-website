@@ -6,25 +6,68 @@
   "home": {
     "title": "Dienstplan - Polizei",
     "subtitle": "The modern solution for your shift planning",
-    "description": "Manage your shifts easily and efficiently. The Dienstplan - Polizei helps you keep track of your working hours.",
+    "description": "Keep track of your shifts and your partner's. Add holidays to better plan appointments.",
     "features": {
       "title": "Features",
       "subtitle": "Everything you need for your shift planning",
       "partnerShiftsTitle": "Partner Shifts",
-      "partnerShifts": "Synchronize your shifts with your partner's and see at a glance when you have time together.",
+      "partnerShifts": "Display your partner's shifts and see at a glance when you have time together.",
       "holidaysTitle": "Holidays",
-      "holidays": "Manage holidays, vacation days, and public holidays clearly and identify conflicts with your shifts early.",
+      "holidays": "Display holidays and public holidays from a selected German state and identify conflicts with your shifts early.",
       "colorCustomizationTitle": "Color Customization",
-      "colorCustomization": "Customize colors for different shift types to better understand your schedule at a glance."
+      "colorCustomization": "Customize colors for holidays, your shift plan, and your partner's to better understand everything at a glance."
     },
     "download": "Download now",
     "availableOn": "Available on",
+    "appStore": {
+      "downloadOn": "Download on the",
+      "appStore": "App Store",
+      "ariaLabel": "Download on the App Store",
+      "getItOn": "Get it on",
+      "googlePlay": "Google Play",
+      "ariaLabelGoogle": "Get it on Google Play"
+    },
     "availablePlans": {
-      "title": "Available Shift Plans"
+      "title": "Available Shift Plans",
+      "subtitle": "Pre-made shift plans for various areas",
+      "description": "Choose from a variety of pre-made shift plans for various areas.",
+      "filters": {
+        "all": "All",
+        "polizeiBremen": "Polizei Bremen",
+        "polizeiBremerhaven": "Polizei Bremerhaven",
+        "general": "General"
+      },
+      "plans": {
+        "1": {
+          "title": "Police Station Lehe/Geestemünde",
+          "authority": "Polizei Bremerhaven",
+          "description": "5-week rotation plan for the Lehe and Geestemünde police stations of OPB Bremenhaven"
+        },
+        "2": {
+          "title": "Riot Police Units",
+          "authority": "Polizei Bremen",
+          "description": "Rotation plan for the riot police units of Polizei Bremen"
+        },
+        "3": {
+          "title": "2-Shift Plan 5-Day",
+          "authority": "General",
+          "description": "Two-shift weekly plan with early and late shifts, Monday to Friday"
+        },
+        "4": {
+          "title": "Emergency and Patrol Service",
+          "authority": "Polizei Bremen",
+          "description": "5-week rotation plan for the emergency and patrol service of Polizei Bremen"
+        },
+        "5": {
+          "title": "Police Station Leherheide",
+          "authority": "Polizei Bremerhaven",
+          "description": "3-week rotation plan for the Leherheide police station of OPB Bremenhaven"
+        }
+      }
     }
   },
   "footer": {
-    "description": "The modern solution for your shift planning. Manage your shifts easily and efficiently.",
+    "description": "The modern solution for your shift planning. Keep track of your shifts and your partner's.",
     "support": "Support",
     "legal": "Legal",
     "imprint": "Imprint",

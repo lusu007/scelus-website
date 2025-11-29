@@ -6,25 +6,68 @@
   "home": {
     "title": "Dienstplan - Polizei",
     "subtitle": "Die moderne Lösung für deine Dienstplanung",
-    "description": "Verwalte deine Schichten einfach und effizient. Die Dienstplan - Polizei hilft dir dabei, deine Arbeitszeiten im Blick zu behalten.",
+    "description": "Behalte einen Überblick über deine Schichten und die deines Partners. Blende dir Ferien ein um Termine besser planen zu können.",
     "features": {
       "title": "Features",
       "subtitle": "Alles was du für deine Dienstplanung brauchst",
       "partnerShiftsTitle": "Partner:in Schichten",
-      "partnerShifts": "Synchronisiere deine Schichten mit denen deiner Partner:in und sehe auf einen Blick, wann ihr zusammen Zeit habt.",
+      "partnerShifts": "Blende die Schichten deiner Partner:in ein und sehe auf einen Blick, wann ihr zusammen Zeit habt.",
       "holidaysTitle": "Ferien",
-      "holidays": "Verwalte Ferien, Urlaubstage und Feiertage übersichtlich und erkenne frühzeitig Konflikte mit deinen Schichten.",
+      "holidays": "Zeige Ferien und Feiertage aus einem ausgewählten Bundesland an und erkenne frühzeitig Konflikte mit deinen Schichten.",
       "colorCustomizationTitle": "Farbanpassung",
-      "colorCustomization": "Passe die Farben für verschiedene Schichttypen an, um deinen Dienstplan auf einen Blick besser erfassen zu können."
+      "colorCustomization": "Passe die Farben für Ferien, deinen Dienstplan und den deines Partners an, um alles auf einen Blick besser erfassen zu können."
     },
     "download": "Jetzt herunterladen",
     "availableOn": "Verfügbar für",
+    "appStore": {
+      "downloadOn": "Laden im",
+      "appStore": "App Store",
+      "ariaLabel": "Im App Store herunterladen",
+      "getItOn": "Jetzt im",
+      "googlePlay": "Google Play",
+      "ariaLabelGoogle": "Bei Google Play herunterladen"
+    },
     "availablePlans": {
-      "title": "Verfügbare Dienstpläne"
+      "title": "Verfügbare Dienstpläne",
+      "subtitle": "Vorgefertigte Dienstpläne für verschiedene Bereiche",
+      "description": "Wähle aus einer Vielzahl von vorgefertigten Dienstplänen für verschiedene Bereiche.",
+      "filters": {
+        "all": "Alle",
+        "polizeiBremen": "Polizei Bremen",
+        "polizeiBremerhaven": "Polizei Bremerhaven",
+        "general": "Allgemein"
+      },
+      "plans": {
+        "1": {
+          "title": "Polizeirevier Lehe/Geestemünde",
+          "authority": "Polizei Bremerhaven",
+          "description": "5-wöchiger Rotationsplan für das Polizeirevier Lehe und Geestemünde der OPB Bremenhaven"
+        },
+        "2": {
+          "title": "Bereitschaftspolizei Züge",
+          "authority": "Polizei Bremen",
+          "description": "Rotationsplan für die Züge der Bereitschaftspolizei der Polizei Bremen"
+        },
+        "3": {
+          "title": "2-Schichtplan 5-Tage",
+          "authority": "Allgemein",
+          "description": "Zwei-Schicht Wochenplan mit Früh- und Spätdienst, Montag bis Freitag"
+        },
+        "4": {
+          "title": "Einsatz- und Streifendienst",
+          "authority": "Polizei Bremen",
+          "description": "5-wöchiger Rotationsplan für den Einsatz- und Streifendienst der Polizei Bremen"
+        },
+        "5": {
+          "title": "Polizeirevier Leherheide",
+          "authority": "Polizei Bremerhaven",
+          "description": "3-wöchiger Rotationsplan für das Polizeirevier Leherheide der OPB Bremenhaven"
+        }
+      }
     }
   },
   "footer": {
-    "description": "Die moderne Lösung für deine Dienstplanung. Verwalte deine Schichten einfach und effizient.",
+    "description": "Die moderne Lösung für deine Dienstplanung. Behalte einen Überblick über deine Schichten und die deines Partners.",
     "support": "Support",
     "legal": "Rechtliches",
     "imprint": "Impressum",

@@ -110,11 +110,11 @@ export default function ContactForm({ locale, translations }: ContactFormProps) 
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label
           htmlFor="name"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-gray-300"
         >
           {translations.name}
         </label>
@@ -124,21 +124,21 @@ export default function ContactForm({ locale, translations }: ContactFormProps) 
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className={`mt-1 block w-full rounded-md border px-3 py-2 shadow-sm focus:border-primary-light focus:outline-none focus:ring-primary-light sm:text-sm ${
+          className={`mt-1 block w-full rounded-md border bg-white px-3 py-2 text-gray-900 shadow-sm focus:border-primary-light focus:outline-none focus:ring-primary-light dark:border-gray-700 dark:bg-gray-800 dark:text-white sm:text-sm ${
             errors.name
-              ? 'border-red-300'
-              : 'border-gray-300'
+              ? 'border-red-300 dark:border-red-500'
+              : ''
           }`}
         />
         {errors.name && (
-          <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+          <p className="mt-1 text-sm text-red-400">{errors.name}</p>
         )}
       </div>
 
       <div>
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-gray-300"
         >
           {translations.email}
         </label>
@@ -148,21 +148,21 @@ export default function ContactForm({ locale, translations }: ContactFormProps) 
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className={`mt-1 block w-full rounded-md border px-3 py-2 shadow-sm focus:border-primary-light focus:outline-none focus:ring-primary-light sm:text-sm ${
+          className={`mt-1 block w-full rounded-md border bg-white px-3 py-2 text-gray-900 shadow-sm focus:border-primary-light focus:outline-none focus:ring-primary-light dark:border-gray-700 dark:bg-gray-800 dark:text-white sm:text-sm ${
             errors.email
-              ? 'border-red-300'
-              : 'border-gray-300'
+              ? 'border-red-300 dark:border-red-500'
+              : ''
           }`}
         />
         {errors.email && (
-          <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+          <p className="mt-1 text-sm text-red-400">{errors.email}</p>
         )}
       </div>
 
       <div>
         <label
           htmlFor="subject"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-gray-300"
         >
           {translations.subject}
         </label>
@@ -172,21 +172,21 @@ export default function ContactForm({ locale, translations }: ContactFormProps) 
           name="subject"
           value={formData.subject}
           onChange={handleChange}
-          className={`mt-1 block w-full rounded-md border px-3 py-2 shadow-sm focus:border-primary-light focus:outline-none focus:ring-primary-light sm:text-sm ${
+          className={`mt-1 block w-full rounded-md border bg-white px-3 py-2 text-gray-900 shadow-sm focus:border-primary-light focus:outline-none focus:ring-primary-light dark:border-gray-700 dark:bg-gray-800 dark:text-white sm:text-sm ${
             errors.subject
-              ? 'border-red-300'
-              : 'border-gray-300'
+              ? 'border-red-300 dark:border-red-500'
+              : ''
           }`}
         />
         {errors.subject && (
-          <p className="mt-1 text-sm text-red-600">{errors.subject}</p>
+          <p className="mt-1 text-sm text-red-400">{errors.subject}</p>
         )}
       </div>
 
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-gray-700"
+          className="block text-sm font-medium text-gray-300"
         >
           {translations.message}
         </label>
@@ -196,28 +196,28 @@ export default function ContactForm({ locale, translations }: ContactFormProps) 
           rows={6}
           value={formData.message}
           onChange={handleChange}
-          className={`mt-1 block w-full rounded-md border px-3 py-2 shadow-sm focus:border-primary-light focus:outline-none focus:ring-primary-light sm:text-sm ${
+          className={`mt-1 block w-full rounded-md border bg-white px-3 py-2 text-gray-900 shadow-sm focus:border-primary-light focus:outline-none focus:ring-primary-light dark:border-gray-700 dark:bg-gray-800 dark:text-white sm:text-sm ${
             errors.message
-              ? 'border-red-300'
-              : 'border-gray-300'
+              ? 'border-red-300 dark:border-red-500'
+              : ''
           }`}
         />
         {errors.message && (
-          <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+          <p className="mt-1 text-sm text-red-400">{errors.message}</p>
         )}
       </div>
 
       {submitStatus === 'success' && (
-        <div className="rounded-md bg-green-50 p-4">
-          <p className="text-sm font-medium text-green-800">
+        <div className="rounded-md bg-green-50 p-4 dark:bg-green-900/20">
+          <p className="text-sm font-medium text-green-800 dark:text-green-300">
             {translations.success}
           </p>
         </div>
       )}
 
       {submitStatus === 'error' && (
-        <div className="rounded-md bg-red-50 p-4">
-          <p className="text-sm font-medium text-red-800">
+        <div className="rounded-md bg-red-50 p-4 dark:bg-red-900/20">
+          <p className="text-sm font-medium text-red-800 dark:text-red-300">
             {translations.error}
           </p>
         </div>
@@ -227,7 +227,7 @@ export default function ContactForm({ locale, translations }: ContactFormProps) 
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full rounded-md bg-primary-dark px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto sm:px-6"
+          className="w-full rounded-md bg-primary-dark px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 focus:ring-offset-gray-900 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto sm:px-6"
         >
           {isSubmitting ? translations.submitting : translations.submit}
         </button>
