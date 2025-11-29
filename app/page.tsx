@@ -4,5 +4,3 @@ import { defaultLocale } from '@/i18n/config';
 export default function Home() {
   redirect(`/${defaultLocale}`);
 }
-
-

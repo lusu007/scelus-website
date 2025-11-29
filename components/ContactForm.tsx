@@ -235,5 +235,3 @@ export default function ContactForm({ locale, translations }: ContactFormProps) 
     </form>
   );
 }
-
-

@@ -101,4 +101,3 @@ export default function ShiftPlansSection({ locale, translations }: ShiftPlansSe
     </div>
   );
 }
-

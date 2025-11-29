@@ -141,4 +141,3 @@ export default async function HomePage({ params }: PageProps) {
     </div>
   );
 }
-

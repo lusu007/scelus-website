@@ -123,4 +123,3 @@ export default function Footer({ locale, translations }: FooterProps) {
     </footer>
   );
 }
-

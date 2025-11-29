@@ -7,5 +7,3 @@ export const localeNames: Record<Locale, string> = {
   de: 'Deutsch',
   en: 'English',
 };
-
-

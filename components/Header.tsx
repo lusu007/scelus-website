@@ -65,4 +65,3 @@ export default function Header({ locale, translations, variant = 'default', show
     </header>
   );
 }
-
