@@ -37,7 +37,7 @@ export default async function HomePage({ params }: PageProps) {
           />
         </div>
 
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl pt-16 pb-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <div className="mb-8 flex justify-center">
               <Image
