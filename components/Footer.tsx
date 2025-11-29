@@ -48,7 +48,7 @@ export default function Footer({ locale, translations }: FooterProps) {
               </p>
               <div className="flex items-center gap-4 pt-2">
                 <a
-                  href="https://github.com/scelus/dienstplan"
+                  href="https://github.com/lusu007/dienstplan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative flex items-center justify-center rounded-lg p-2 text-gray-400 transition-all duration-200 hover:bg-primary-light/10 hover:text-primary-light focus:outline-none focus:ring-2 focus:ring-primary-light focus:ring-offset-2 focus:ring-offset-gray-900"

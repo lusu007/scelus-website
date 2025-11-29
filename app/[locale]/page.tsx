@@ -29,7 +29,7 @@ export default async function HomePage({ params }: PageProps) {
           className="pointer-events-none absolute inset-0 -z-10"
         >
           <Image
-            src="/11_preview.jpeg"
+            src="/hero-background.jpeg"
             alt=""
             fill
             className="object-cover opacity-30 blur-[24px]"
