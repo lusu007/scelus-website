@@ -31,4 +31,3 @@ export default async function DatenschutzRedirect() {
   const locale = await detectLocale();
   redirect(`/${locale}/privacy`);
 }
-

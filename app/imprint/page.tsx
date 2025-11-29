@@ -31,4 +31,3 @@ export default async function ImprintRedirect() {
   const locale = await detectLocale();
   redirect(`/${locale}/imprint`);
 }
-

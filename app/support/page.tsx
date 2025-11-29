@@ -31,4 +31,3 @@ export default async function SupportRedirect() {
   const locale = await detectLocale();
   redirect(`/${locale}/support`);
 }
-
