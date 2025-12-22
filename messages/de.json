@@ -1,14 +1,49 @@
 {
   "common": {
-    "appName": "Dienstplan - Polizei",
+    "appName": "Scelus Development",
     "language": "Sprache",
-    "metaTitle": "Dienstplan - Polizei",
-    "metaDescription": "Die moderne Lösung für Ihre Dienstplanung"
+    "metaTitle": "Scelus Development",
+    "metaDescription": "Wir entwickeln moderne Softwarelösungen für den Alltag"
   },
   "home": {
-    "title": "Dienstplan - Polizei",
-    "subtitle": "Die moderne Lösung für deine Dienstplanung",
-    "description": "Behalte einen Überblick über deine Schichten und die deines Partners. Blende dir Ferien ein um Termine besser planen zu können.",
+    "hero": {
+      "title": "Scelus Development",
+      "subtitle": "Wir entwickeln moderne Softwarelösungen für den Alltag"
+    },
+    "projects": {
+      "title": "Unsere Projekte",
+      "subtitle": "Entdecke die Anwendungen, die wir entwickelt haben"
+    },
+    "dienstplan": {
+      "title": "Dienstplan - Polizei",
+      "subtitle": "Die moderne Lösung für deine Dienstplanung",
+      "description": "Behalte einen Überblick über deine Schichten und die deines Partners. Blende dir Ferien ein um Termine besser planen zu können.",
+      "features": {
+        "partnerShiftsTitle": "Partner:in Schichten",
+        "partnerShifts": "Blende die Schichten deiner Partner:in ein und sehe auf einen Blick, wann ihr zusammen Zeit habt.",
+        "holidaysTitle": "Ferien",
+        "holidays": "Zeige Ferien und Feiertage aus einem ausgewählten Bundesland an und erkenne frühzeitig Konflikte mit deinen Schichten.",
+        "colorCustomizationTitle": "Farbanpassung",
+        "colorCustomization": "Passe die Farben für Ferien, deinen Dienstplan und den deines Partners an, um alles auf einen Blick besser erfassen zu können."
+      },
+      "availableOn": "Verfügbar für Android und iOS"
+    },
+    "grounds": {
+      "title": "Grounds Network",
+      "subtitle": "Die Grundlage für die nächste Generation von Minecraft Multiplayer-Erlebnissen",
+      "description": "Eine vernetzte Plattform für Creator, Entwickler und Spieler. Unsere Mission ist es, hochwertige Spielinfrastruktur, Tools und Welten für jeden zugänglich zu machen.",
+      "features": {
+        "feature1Title": "Casual PVP mit Trainingsmodi",
+        "feature1": "Übe und verbessere deine Fähigkeiten mit speziellen Trainingsmodi",
+        "feature2Title": "Pro PVP & Turniere",
+        "feature2": "Moderner Software-Stack und Infrastruktur für kompetitives Gameplay",
+        "feature3Title": "Custom GUIs & Cosmetics",
+        "feature3": "Anpassbare Benutzeroberflächen und kosmetische Items für ein verbessertes Spielerlebnis",
+        "feature4Title": "Creator Portal für Custom Gamemodes",
+        "feature4": "Erstelle und veröffentliche deine eigenen benutzerdefinierten Spielmodi und Erlebnisse"
+      },
+      "visitWebsite": "Website besuchen"
+    },
     "features": {
       "title": "Features",
       "subtitle": "Alles was du für deine Dienstplanung brauchst",
@@ -69,7 +104,7 @@
     }
   },
   "footer": {
-    "description": "Die moderne Lösung für deine Dienstplanung. Behalte einen Überblick über deine Schichten und die deines Partners.",
+    "description": "Wir entwickeln moderne Softwarelösungen für den Alltag.",
     "support": "Support",
     "legal": "Rechtliches",
     "imprint": "Impressum",
@@ -78,7 +113,56 @@
   },
   "imprint": {
     "title": "Impressum",
-    "content": "Hier finden Sie die rechtlichen Informationen zur Dienstplan - Polizei."
+    "content": "Hier finden Sie die rechtlichen Informationen zur Dienstplan - Polizei.",
+    "hero": {
+      "title": "Scelus Development",
+      "subtitle": "Wir entwickeln moderne Softwarelösungen für den Alltag"
+    },
+    "projects": {
+      "title": "Unsere Projekte",
+      "subtitle": "Entdecke die Anwendungen, die wir entwickelt haben"
+    },
+    "dienstplan": {
+      "title": "Dienstplan - Polizei",
+      "subtitle": "Die moderne Lösung für deine Dienstplanung",
+      "description": "Behalte einen Überblick über deine Schichten und die deines Partners. Blende dir Ferien ein um Termine besser planen zu können.",
+      "features": {
+        "partnerShiftsTitle": "Partner:in Schichten",
+        "partnerShifts": "Blende die Schichten deiner Partner:in ein und sehe auf einen Blick, wann ihr zusammen Zeit habt.",
+        "holidaysTitle": "Ferien",
+        "holidays": "Zeige Ferien und Feiertage aus einem ausgewählten Bundesland an und erkenne frühzeitig Konflikte mit deinen Schichten.",
+        "colorCustomizationTitle": "Farbanpassung",
+        "colorCustomization": "Passe die Farben für Ferien, deinen Dienstplan und den deines Partners an, um alles auf einen Blick besser erfassen zu können."
+      },
+      "availableOn": "Verfügbar für"
+    },
+    "grounds": {
+      "title": "Grounds Network",
+      "subtitle": "Die Grundlage für die nächste Generation von Minecraft Multiplayer-Erlebnissen",
+      "description": "Eine vernetzte Plattform für Creator, Entwickler und Spieler. Unsere Mission ist es, hochwertige Spielinfrastruktur, Tools und Welten für jeden zugänglich zu machen.",
+      "features": {
+        "feature1Title": "Casual PVP mit Trainingsmodi",
+        "feature1": "Übe und verbessere deine Fähigkeiten mit speziellen Trainingsmodi",
+        "feature2Title": "Pro PVP & Turniere",
+        "feature2": "Moderner Software-Stack und Infrastruktur für kompetitives Gameplay",
+        "feature3Title": "Custom GUIs & Cosmetics",
+        "feature3": "Anpassbare Benutzeroberflächen und kosmetische Items für ein verbessertes Spielerlebnis",
+        "feature4Title": "Creator Portal für Custom Gamemodes",
+        "feature4": "Erstelle und veröffentliche deine eigenen benutzerdefinierten Spielmodi und Erlebnisse"
+      },
+      "visitWebsite": "Website besuchen"
+    },
+    "legal": {
+      "title": "Impressum",
+      "description": "Angaben gemäß § 5 TMG und verantwortlich für den Inhalt nach § 55 Abs. 2 RStV.",
+      "tmg": "Angaben gemäß § 5 TMG:",
+      "contact": "Kontakt:",
+      "responsible": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:",
+      "disclaimer": {
+        "title": "Haftungsausschluss",
+        "text": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+      }
+    }
   },
   "privacy": {
     "title": "Datenschutz",

@@ -1,14 +1,49 @@
 {
   "common": {
-    "appName": "Dienstplan - Polizei",
+    "appName": "Scelus Development",
     "language": "Language",
-    "metaTitle": "Dienstplan - Polizei",
-    "metaDescription": "The modern solution for your shift planning"
+    "metaTitle": "Scelus Development",
+    "metaDescription": "We develop modern software solutions for everyday life"
   },
   "home": {
-    "title": "Dienstplan - Polizei",
-    "subtitle": "The modern solution for your shift planning",
-    "description": "Keep track of your shifts and your partner's. Add holidays to better plan appointments.",
+    "hero": {
+      "title": "Scelus Development",
+      "subtitle": "We develop modern software solutions for everyday life"
+    },
+    "projects": {
+      "title": "Our Projects",
+      "subtitle": "Discover the applications we have developed"
+    },
+    "dienstplan": {
+      "title": "Dienstplan - Polizei",
+      "subtitle": "The modern solution for your shift planning",
+      "description": "Keep track of your shifts and your partner's. Add holidays to better plan appointments.",
+      "features": {
+        "partnerShiftsTitle": "Partner Shifts",
+        "partnerShifts": "Display your partner's shifts and see at a glance when you have time together.",
+        "holidaysTitle": "Holidays",
+        "holidays": "Display holidays and public holidays from a selected German state and identify conflicts with your shifts early.",
+        "colorCustomizationTitle": "Color Customization",
+        "colorCustomization": "Customize colors for holidays, your shift plan, and your partner's to better understand everything at a glance."
+      },
+      "availableOn": "Available on"
+    },
+    "grounds": {
+      "title": "Grounds Network",
+      "subtitle": "Building the foundation for the next generation of Minecraft multiplayer experiences",
+      "description": "A connected platform for creators, developers, and players. Our mission is to make high-quality game infrastructure, tools, and worlds accessible to everyone.",
+      "features": {
+        "feature1Title": "Casual PVP with Training Modes",
+        "feature1": "Practice and improve your skills with dedicated training modes",
+        "feature2Title": "Pro PVP & Tournaments",
+        "feature2": "Modern software stack and infrastructure for competitive gameplay",
+        "feature3Title": "Custom GUIs & Cosmetics",
+        "feature3": "Customizable user interfaces and cosmetic items for enhanced player experience",
+        "feature4Title": "Creator Portal for Custom Gamemodes",
+        "feature4": "Build and publish your own custom game modes and experiences"
+      },
+      "visitWebsite": "Visit Website"
+    },
     "features": {
       "title": "Features",
       "subtitle": "Everything you need for your shift planning",
@@ -69,7 +104,7 @@
     }
   },
   "footer": {
-    "description": "The modern solution for your shift planning. Keep track of your shifts and your partner's.",
+    "description": "We develop modern software solutions for everyday life.",
     "support": "Support",
     "legal": "Legal",
     "imprint": "Imprint",
@@ -78,7 +113,56 @@
   },
   "imprint": {
     "title": "Imprint",
-    "content": "Here you will find the legal information about the Dienstplan - Polizei."
+    "content": "Here you will find the legal information about the Dienstplan - Polizei.",
+    "hero": {
+      "title": "Scelus Development",
+      "subtitle": "We develop modern software solutions for everyday life"
+    },
+    "projects": {
+      "title": "Our Projects",
+      "subtitle": "Discover the applications we have developed"
+    },
+    "dienstplan": {
+      "title": "Dienstplan - Polizei",
+      "subtitle": "The modern solution for your shift planning",
+      "description": "Keep track of your shifts and your partner's. Add holidays to better plan appointments.",
+      "features": {
+        "partnerShiftsTitle": "Partner Shifts",
+        "partnerShifts": "Display your partner's shifts and see at a glance when you have time together.",
+        "holidaysTitle": "Holidays",
+        "holidays": "Display holidays and public holidays from a selected German state and identify conflicts with your shifts early.",
+        "colorCustomizationTitle": "Color Customization",
+        "colorCustomization": "Customize colors for holidays, your shift plan, and your partner's to better understand everything at a glance."
+      },
+      "availableOn": "Available on Android and iOS"
+    },
+    "grounds": {
+      "title": "Grounds Network",
+      "subtitle": "Building the foundation for the next generation of Minecraft multiplayer experiences",
+      "description": "A connected platform for creators, developers, and players. Our mission is to make high-quality game infrastructure, tools, and worlds accessible to everyone.",
+      "features": {
+        "feature1Title": "Casual PVP with Training Modes",
+        "feature1": "Practice and improve your skills with dedicated training modes",
+        "feature2Title": "Pro PVP & Tournaments",
+        "feature2": "Modern software stack and infrastructure for competitive gameplay",
+        "feature3Title": "Custom GUIs & Cosmetics",
+        "feature3": "Customizable user interfaces and cosmetic items for enhanced player experience",
+        "feature4Title": "Creator Portal for Custom Gamemodes",
+        "feature4": "Build and publish your own custom game modes and experiences"
+      },
+      "visitWebsite": "Visit Website"
+    },
+    "legal": {
+      "title": "Imprint",
+      "description": "Information according to § 5 TMG and responsible for content according to § 55 para. 2 RStV.",
+      "tmg": "Information according to § 5 TMG:",
+      "contact": "Contact:",
+      "responsible": "Responsible for content according to § 55 para. 2 RStV:",
+      "disclaimer": {
+        "title": "Disclaimer",
+        "text": "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
+      }
+    }
   },
   "privacy": {
     "title": "Privacy Policy",

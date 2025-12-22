@@ -3,6 +3,9 @@ import Image from 'next/image';
 import { FaGithub } from 'react-icons/fa';
 
 type Translations = {
+  common?: {
+    appName: string;
+  };
   footer: {
     description: string;
     support: string;
@@ -33,14 +36,14 @@ export default function Footer({ locale, translations }: FooterProps) {
                 <div className="relative">
                   <Image
                     src="/Logo.svg"
-                    alt="Dienstplan - Polizei"
+                    alt={translations.common?.appName || 'Scelus Development'}
                     width={44}
                     height={44}
                     className="h-11 w-11"
                   />
                 </div>
                 <span className="text-xl font-bold tracking-tight text-white">
-                  Dienstplan - Polizei
+                  {translations.common?.appName || 'Scelus Development'}
                 </span>
               </div>
               <p className="max-w-md text-base leading-7 text-gray-400 text-balance">
