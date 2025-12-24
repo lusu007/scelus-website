@@ -24,7 +24,9 @@
         "holidaysTitle": "Holidays",
         "holidays": "Display holidays and public holidays from a selected German state and identify conflicts with your shifts early.",
         "colorCustomizationTitle": "Color Customization",
-        "colorCustomization": "Customize colors for holidays, your shift plan, and your partner's to better understand everything at a glance."
+        "colorCustomization": "Customize colors for holidays, your shift plan, and your partner's to better understand everything at a glance.",
+        "availablePlansTitle": "Available Shift Plans",
+        "availablePlans": "Choose from pre-made shift plans for various areas of Polizei Bremen and OPB Bremerhaven, such as police stations, riot police units, and shift schedules."
       },
       "availableOn": "Available on"
     },

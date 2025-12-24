@@ -24,7 +24,9 @@
         "holidaysTitle": "Ferien",
         "holidays": "Zeige Ferien und Feiertage aus einem ausgewählten Bundesland an und erkenne frühzeitig Konflikte mit deinen Schichten.",
         "colorCustomizationTitle": "Farbanpassung",
-        "colorCustomization": "Passe die Farben für Ferien, deinen Dienstplan und den deines Partners an, um alles auf einen Blick besser erfassen zu können."
+        "colorCustomization": "Passe die Farben für Ferien, deinen Dienstplan und den deines Partners an, um alles auf einen Blick besser erfassen zu können.",
+        "availablePlansTitle": "Verfügbare Dienstpläne",
+        "availablePlans": "Wähle aus vorgefertigten Dienstplänen für verschiedene Bereiche der Polizei Bremen und OPB Bremerhaven, wie Polizeireviere, Bereitschaftspolizei und Schichtpläne."
       },
       "availableOn": "Verfügbar für Android und iOS"
     },

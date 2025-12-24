@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { getTranslations } from '@/i18n/translations';
 import AppStoreButtons from '@/components/AppStoreButtons';
 import { Locale } from '@/i18n/config';
-import { HiUserGroup, HiCalendar, HiColorSwatch, HiGlobe, HiFire, HiViewGrid, HiServer, HiCode } from 'react-icons/hi';
+import { HiUserGroup, HiCalendar, HiColorSwatch, HiGlobe, HiFire, HiViewGrid, HiServer, HiCode, HiClipboardList } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
 import Header from '@/components/Header';
 
@@ -113,6 +113,17 @@ export default async function HomePage({ params }: PageProps) {
                   </dt>
                   <dd className="mt-2 text-sm text-gray-400">
                     {t.home.dienstplan.features.colorCustomization}
+                  </dd>
+                </div>
+                <div className="relative pl-12">
+                  <dt className="text-base/7 font-semibold text-white">
+                    <div className="absolute top-0 left-0 flex size-8 items-center justify-center rounded-lg bg-indigo-500">
+                      <HiClipboardList className="size-5 text-white" aria-hidden="true" />
+                    </div>
+                    {t.home.dienstplan.features.availablePlansTitle}
+                  </dt>
+                  <dd className="mt-2 text-sm text-gray-400">
+                    {t.home.dienstplan.features.availablePlans}
                   </dd>
                 </div>
               </div>
