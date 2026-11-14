@@ -1,141 +1,42 @@
-# Dienstplan App Website
+# Scelus Development
 
-A modern, multi-language landing page for the Dienstplan App, built with Next.js and deployed on Cloudflare Pages.
+The bilingual project portfolio for [scelus.io](https://scelus.io), built with Next.js 16, React 19, TypeScript and Tailwind CSS 4. Hosted on Cloudflare Workers through OpenNext.
 
-## Features
+## Local development
 
-- 🌍 Multi-language support (German/English)
-- 📱 Responsive design
-- 🎨 Modern UI matching the app's branding
-- ⚡ Static site generation for fast loading
-- 🔗 App Store links (iOS & Android)
+Requires Node.js 24 or later.
 
-## Tech Stack
-
-- **Next.js 16** - React framework with static export
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Utility-first CSS framework
-- **Cloudflare Pages** - Hosting platform
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ and npm/yarn/pnpm
-
-### Installation
-
-1. Install dependencies:
-
-```bash
-npm install
-```
-
-2. Run the development server:
-
-```bash
+```sh
+npm ci
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open `/de/` or `/en/`. The root route redirects to the default German version.
 
-### Build for Production
+## Validation and Cloudflare
 
-```bash
+```sh
+npx tsc --noEmit
 npm run build
 ```
 
-This will generate a static site in the `out` directory, ready for deployment.
+`npm run preview` builds and previews the Cloudflare Worker locally. `npm run deploy` publishes through the existing OpenNext configuration. Deployment settings are in `wrangler.jsonc` and `open-next.config.ts`.
 
-## Deployment on Cloudflare Pages
+The locale header uses Edge Middleware because the installed Cloudflare adapter does not support Node.js Middleware / Proxy. Next.js 16 emits a deprecation notice for this compatible path.
 
-### Option 1: Connect via Git (Recommended)
+## Content and design
 
-1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
-2. Go to Cloudflare Dashboard → Pages → Create a project
-3. Connect your repository
-4. Configure build settings:
-   - **Build command**: `npm run build`
-   - **Build output directory**: `out`
-   - **Node version**: `18` or higher
-5. Deploy!
+- `i18n/portal.ts`: German and English portfolio copy.
+- `messages/`: shared and existing legal translation content.
+- `app/[locale]/`: portfolio, support, imprint and privacy pages.
+- `app/globals.css`: shared responsive design tokens and styles.
+- `components/Brand.tsx`: Scelus wordmark and geometric brand mark.
+- `components/CalendarPreview.tsx`: illustrative calendar artwork, not a product screenshot.
 
-### Option 2: Deploy via Wrangler CLI
+Support opens a draft in the visitor's email app; it does not send email from a server. Entries are retained, and the interface never claims successful delivery.
 
-1. Install Wrangler CLI:
+## Assets
 
-```bash
-npm install -g wrangler
-```
+Manrope and Instrument Serif are self-hosted from [Google Fonts](https://github.com/google/fonts). Their SIL Open Font License files are included in `public/fonts/`.
 
-2. Login to Cloudflare:
-
-```bash
-wrangler login
-```
-
-3. Build the project:
-
-```bash
-npm run build
-```
-
-4. Deploy:
-
-```bash
-wrangler pages deploy out
-```
-
-### Environment Variables
-
-If you need environment variables, add them in the Cloudflare Pages dashboard under Settings → Environment Variables.
-
-## Project Structure
-
-```
-├── app/                    # Next.js App Router
-│   ├── [locale]/          # Localized routes
-│   │   ├── page.tsx       # Landing page
-│   │   ├── imprint/       # Imprint page
-│   │   ├── privacy/       # Privacy policy page
-│   │   └── support/       # Support page
-│   ├── layout.tsx         # Root layout
-│   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── Header.tsx
-│   ├── Footer.tsx
-│   ├── LanguageSwitcher.tsx
-│   └── AppStoreButtons.tsx
-├── i18n/                  # Internationalization
-│   ├── config.ts
-│   └── translations.ts
-├── messages/              # Translation files
-│   ├── de.json
-│   └── en.json
-├── public/                # Static assets
-│   └── Logo.svg
-└── package.json
-```
-
-## Customization
-
-### Update App Store Links
-
-Edit `components/AppStoreButtons.tsx` and update the `iosUrl` and `androidUrl` props, or pass them as props from the page component.
-
-### Update Content
-
-- Edit translation files in `messages/de.json` and `messages/en.json`
-- Update placeholder content in the page components
-
-### Update Styling
-
-- Colors are defined in `tailwind.config.js` (matching the logo colors)
-- Modify components in the `components/` directory
-- Global styles are in `app/globals.css`
-
-## License
-
-© 2024 Dienstplan App. All rights reserved.
-
-
+The Dienstplan icon is the existing project asset `public/Logo.svg`. Grounds artwork and wordmark come from the existing `groundsgg/grounds-landing` repository (`public/assets/ruins-bg.webp` and `public/assets/wordmark.webp`). No external font or image service is needed at runtime.

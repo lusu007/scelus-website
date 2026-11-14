@@ -1,67 +1,99 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import LanguageSwitcher from './LanguageSwitcher';
-
-type Translations = {
-  common: {
-    appName: string;
-  };
-};
+import Link from "next/link";
+import { useRef, useState } from "react";
+import { HiArrowUpRight, HiBars2, HiXMark } from "react-icons/hi2";
+import LanguageSwitcher from "./LanguageSwitcher";
+import Brand from "./Brand";
+import { getPortalCopy } from "@/i18n/portal";
+import type { Locale } from "@/i18n/config";
 
 type HeaderProps = {
   locale: string;
-  translations: Translations;
-  variant?: 'default' | 'hero';
-  showLogo?: boolean;
 };
 
-export default function Header({ locale, translations, variant = 'default', showLogo = true }: HeaderProps) {
-  const isHero = variant === 'hero';
-  
+export default function Header({ locale }: HeaderProps) {
+  const t = getPortalCopy(locale as Locale);
+  const [open, setOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const links = [
+    ["projects", t.nav.projects],
+    ["about", t.nav.about],
+    ["contact", t.nav.contact],
+  ];
   return (
-    <header 
-      className={
-        isHero
-          ? 'absolute inset-x-0 top-0 z-50'
-          : 'relative z-50 bg-white shadow-sm dark:bg-gray-900 dark:shadow-gray-800'
-      }
+    <header
+      className="site-header"
+      id="top"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && open) {
+          setOpen(false);
+          menuButton.current?.focus();
+        }
+      }}
     >
-      <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
-        {showLogo ? (
-          <div className="flex lg:flex-1">
-            <Link
-              href={`/${locale}`}
-              className="flex items-center gap-3 transition-opacity hover:opacity-80"
-            >
-              <div className="relative">
-                <Image
-                  src="/Logo.svg"
-                  alt={translations.common.appName}
-                  width={44}
-                  height={44}
-                  className="h-11 w-11"
-                />
-              </div>
-              <span className={`text-xl font-bold tracking-tight ${
-                isHero 
-                  ? 'text-gray-900 dark:text-white' 
-                  : 'text-gray-900 dark:text-white'
-              }`}>
-                {translations.common.appName}
-              </span>
+      <a className="skip-link" href="#content">
+        {t.nav.skip}
+      </a>
+      <nav className="container header-inner" aria-label={t.nav.label}>
+        <Link
+          href={`/${locale}/`}
+          className="brand-link"
+          aria-label="Scelus Development"
+        >
+          <Brand />
+        </Link>
+        <div className="desktop-nav">
+          {links.map(([id, label]) => (
+            <Link key={id} href={`/${locale}/#${id}`}>
+              {label}
             </Link>
-          </div>
-        ) : (
-          <div className="flex lg:flex-1"></div>
-        )}
-        <div className="flex lg:flex-1 lg:justify-end">
-          <div className="relative z-10 flex items-center gap-4">
-            <LanguageSwitcher currentLocale={locale} variant={isHero ? 'hero' : 'default'} />
-          </div>
+          ))}
+        </div>
+        <div className="header-actions">
+          <LanguageSwitcher currentLocale={locale} />
+          <a
+            href="mailto:hi@scelus.io"
+            className="header-email"
+            aria-label={t.contact.email}
+          >
+            <HiArrowUpRight aria-hidden="true" />
+          </a>
+          <button
+            ref={menuButton}
+            className="menu-toggle"
+            type="button"
+            aria-label={t.nav.menu}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? (
+              <HiXMark aria-hidden="true" />
+            ) : (
+              <HiBars2 aria-hidden="true" />
+            )}
+          </button>
         </div>
       </nav>
+      {open && (
+        <nav
+          id="mobile-nav"
+          className="mobile-nav container"
+          aria-label={t.nav.menu}
+        >
+          {links.map(([id, label]) => (
+            <Link
+              key={id}
+              href={`/${locale}/#${id}`}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+              <HiArrowUpRight aria-hidden="true" />
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   );
 }

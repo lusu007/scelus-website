@@ -1,57 +1,40 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { headers } from 'next/headers';
-import './globals.css';
-import { defaultLocale, type Locale } from '@/i18n/config';
-import { getTranslations } from '@/i18n/translations';
-import ThemeProvider from '@/components/ThemeProvider';
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { headers } from "next/headers";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const manrope = localFont({
+  src: "../public/fonts/Manrope.ttf",
+  variable: "--font-manrope",
+  display: "swap",
+  weight: "200 800",
+});
+const instrument = localFont({
+  src: "../public/fonts/InstrumentSerif-Italic.ttf",
+  variable: "--font-instrument",
+  display: "swap",
+  style: "italic",
+  weight: "400",
+});
 
-async function detectLocale(): Promise<Locale> {
-  const headersList = await headers();
-  const acceptLanguage = headersList.get('accept-language');
-  
-  if (acceptLanguage) {
-    const languages = acceptLanguage
-      .split(',')
-      .map((lang: string) => lang.split(';')[0].trim().toLowerCase());
-    
-    for (const lang of languages) {
-      if (lang.startsWith('de')) {
-        return 'de';
-      }
-      if (lang.startsWith('en')) {
-        return 'en';
-      }
-    }
-  }
-  
-  return defaultLocale;
-}
+export const metadata: Metadata = {
+  metadataBase: new URL("https://scelus.io"),
+  title: { default: "Scelus Development", template: "%s · Scelus" },
+  description:
+    "Apps, Tools und digitale Welten. Die Projekte von Scelus Development.",
+};
 
-export async function generateMetadata(): Promise<Metadata> {
-  const locale = await detectLocale();
-  const t = getTranslations(locale);
-  
-  return {
-    title: t.common.metaTitle,
-    description: t.common.metaDescription,
-    icons: {
-      icon: '/icon.svg',
-    },
-  };
-}
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const locale =
+    (await headers()).get("x-scelus-locale") === "en" ? "en" : "de";
   return (
-    <html lang={defaultLocale} suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider>{children}</ThemeProvider>
+    <html lang={locale}>
+      <body className={`${manrope.variable} ${instrument.variable}`}>
+        {children}
       </body>
     </html>
   );
