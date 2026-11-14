@@ -20,8 +20,9 @@ export default function Brand() {
   return (
     <span className="brand">
       <BrandMark />
-      <span>
-        scelus<span className="brand-period">.</span>
+      <span className="brand-copy">
+        <span className="brand-name">Scelus</span>
+        <span className="brand-descriptor">Development</span>
       </span>
     </span>
   );

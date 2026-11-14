@@ -12,7 +12,7 @@ const de = {
     first: "Gute Ideen.",
     second: "Echte Software.",
     description:
-      "Apps, Tools und digitale Welten. Scelus ist das Zuhause für Software, die aus eigenen Ideen entsteht und im Alltag etwas bewegt.",
+      "Apps, Tools und digitale Welten. Scelus Development ist das Zuhause für Software, die aus eigenen Ideen entsteht und im Alltag etwas bewegt.",
     action: "Projekte entdecken",
     contact: "Lass uns sprechen",
     note: "Unterschiedliche Projekte. Dieselbe Neugier.",
@@ -20,7 +20,7 @@ const de = {
   projects: {
     title: "Was aus Ideen wird.",
     intro:
-      "Vom nächsten Dienst bis zur nächsten Spielwelt. Entdecke die Projekte von Scelus.",
+      "Vom nächsten Dienst bis zur nächsten Spielwelt. Entdecke die Projekte von Scelus Development.",
     dienstplan: {
       category: "Mobile App",
       title: "Dienstplan – Polizei",
@@ -86,7 +86,7 @@ const en: PortalCopy = {
     first: "Good ideas.",
     second: "Real software.",
     description:
-      "Apps, tools and digital worlds. Scelus is a home for software born from personal ideas and built to make a difference in everyday life.",
+      "Apps, tools and digital worlds. Scelus Development is a home for software born from personal ideas and built to make a difference in everyday life.",
     action: "Explore the projects",
     contact: "Let’s talk",
     note: "Different projects. The same curiosity.",
@@ -94,7 +94,7 @@ const en: PortalCopy = {
   projects: {
     title: "Ideas, brought to life.",
     intro:
-      "From your next shift to your next game world. Discover the projects by Scelus.",
+      "From your next shift to your next game world. Discover the projects by Scelus Development.",
     dienstplan: {
       category: "Mobile app",
       title: "Dienstplan – Polizei",

@@ -122,8 +122,20 @@ section[id] {
   height: 36px;
   color: var(--blue);
 }
-.brand-period {
-  color: var(--blue);
+.brand-copy {
+  display: grid;
+  gap: 4px;
+}
+.brand-name {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+.brand-descriptor {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.035em;
 }
 .brand-link {
   display: inline-flex;
@@ -365,14 +377,23 @@ section[id] {
   flex-shrink: 0;
   cursor: zoom-in;
   border-radius: 14px;
+}
+.app-screenshots-row .screenshot-card {
+  display: block;
+  border-radius: inherit;
   box-shadow: 0 16px 32px -12px #20355660;
+  pointer-events: none;
 }
 .app-screenshots-row .screenshot-primary {
   z-index: 2;
+}
+.app-screenshots-row .screenshot-primary .screenshot-card {
   transform: translate(17px, 0) rotate(-7deg);
 }
 .app-screenshots-row .screenshot-secondary {
   z-index: 1;
+}
+.app-screenshots-row .screenshot-secondary .screenshot-card {
   transform: translate(-17px, 18px) rotate(6deg);
 }
 .app-screenshots-row img {
@@ -381,9 +402,12 @@ section[id] {
   height: auto;
   border-radius: inherit;
 }
-.app-screenshots-row a:hover,
 .app-screenshots-row a:focus-visible {
-  z-index: 3;
+  outline: none;
+}
+.app-screenshots-row a:focus-visible .screenshot-card {
+  outline: 2px solid var(--blue);
+  outline-offset: 6px;
 }
 .app-screenshots figcaption {
   margin-top: 10px;
@@ -631,8 +655,7 @@ section[id] {
   color: #f5f6ef;
   padding-top: 48px;
 }
-.site-footer .brand svg,
-.site-footer .brand-period {
+.site-footer .brand svg {
   color: #b4c2a6;
 }
 .footer-main {
@@ -863,6 +886,12 @@ section[id] {
   }
   .brand {
     font-size: 28px;
+  }
+  .brand-name {
+    font-size: 24px;
+  }
+  .brand-descriptor {
+    font-size: 11px;
   }
   .brand svg {
     width: 31px;

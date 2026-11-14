@@ -19,7 +19,7 @@ const instrument = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://scelus.io"),
-  title: { default: "Scelus Development", template: "%s · Scelus" },
+  title: { default: "Scelus Development", template: "%s · Scelus Development" },
   description:
     "Apps, Tools und digitale Welten. Die Projekte von Scelus Development.",
 };

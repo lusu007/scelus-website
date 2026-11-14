@@ -20,7 +20,7 @@ export async function generateMetadata({
   if (!locales.includes(locale as Locale)) return {};
   const t = getTranslations(locale as Locale);
   return {
-    title: { default: t.common.metaTitle, template: `%s · Scelus` },
+    title: { default: t.common.metaTitle, template: `%s · Scelus Development` },
     description: t.common.metaDescription,
   };
 }
