@@ -59,7 +59,6 @@ export default async function HomePage({
             </div>
           </div>
           <div className="hero-bottom">
-            <p>{t.hero.note}</p>
             <a href="#contact">
               {t.hero.contact}
               <HiArrowUpRight aria-hidden="true" />

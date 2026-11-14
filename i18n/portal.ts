@@ -15,7 +15,6 @@ const de = {
       "Apps, Tools und digitale Welten. Scelus Development ist das Zuhause für Software, die aus eigenen Ideen entsteht und im Alltag etwas bewegt.",
     action: "Projekte entdecken",
     contact: "Lass uns sprechen",
-    note: "Unterschiedliche Projekte. Dieselbe Neugier.",
   },
   projects: {
     title: "Was aus Ideen wird.",
@@ -89,7 +88,6 @@ const en: PortalCopy = {
       "Apps, tools and digital worlds. Scelus Development is a home for software born from personal ideas and built to make a difference in everyday life.",
     action: "Explore the projects",
     contact: "Let’s talk",
-    note: "Different projects. The same curiosity.",
   },
   projects: {
     title: "Ideas, brought to life.",
