@@ -9,11 +9,11 @@ export default function AppScreenshots({ locale }: { locale: Locale }) {
       <div className="app-screenshots-row">
         {[
           {
-            src: "/screenshots/dienstplan-calendar.png",
+            src: "/screenshots/dienstplan-calendar-dark.png",
             alt: t.screenshotCalendar,
           },
           {
-            src: "/screenshots/dienstplan-settings.png",
+            src: "/screenshots/dienstplan-settings-dark.png",
             alt: t.screenshotSettings,
           },
         ].map((shot, index) => (

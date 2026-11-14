@@ -28,9 +28,9 @@ const de = {
         "Mehr Überblick über deine Schichten. Und mehr Zeit für alles dazwischen. Mit Dienstplänen, Partnerschichten und Ferien in einer App.",
       detail: "Dein Dienst. Dein Überblick.",
       screenshotCalendar:
-        "Dienstplan auf dem Smartphone: Kalender und Dienste im Überblick",
+        "Dienstplan im Dark Mode: Kalender und Dienste im Überblick",
       screenshotSettings:
-        "Dienstplan auf dem Smartphone: Einstellungen und Partnerschichten",
+        "Dienstplan im Dark Mode: Einstellungen und Partnerschichten",
       screenshotOpen: "Screenshot in voller Größe öffnen",
       screenshotSource: "Kalender & Einstellungen",
       features: [
@@ -102,9 +102,9 @@ const en: PortalCopy = {
         "A clearer view of your shifts. More time for everything in between. Your schedule, your partner’s shifts and school holidays in one app.",
       detail: "Your shifts. At a glance.",
       screenshotCalendar:
-        "Dienstplan on a smartphone: calendar and shifts (German interface)",
+        "Dienstplan in dark mode: calendar and shifts (German interface)",
       screenshotSettings:
-        "Dienstplan on a smartphone: settings and partner shifts (German interface)",
+        "Dienstplan in dark mode: settings and partner shifts (German interface)",
       screenshotOpen: "Open full-size screenshot",
       screenshotSource: "Calendar & settings",
       features: [
