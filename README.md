@@ -31,7 +31,7 @@ The locale header uses Edge Middleware because the installed Cloudflare adapter 
 - `app/[locale]/`: portfolio, support, imprint and privacy pages.
 - `app/globals.css`: shared responsive design tokens and styles.
 - `components/Brand.tsx`: Scelus wordmark and geometric brand mark.
-- `components/CalendarPreview.tsx`: illustrative calendar artwork, not a product screenshot.
+- `components/AppScreenshots.tsx`: original smartphone screenshots from the published store listing, with links to full-size images.
 
 Support opens a draft in the visitor's email app; it does not send email from a server. Entries are retained, and the interface never claims successful delivery.
 
@@ -39,4 +39,6 @@ Support opens a draft in the visitor's email app; it does not send email from a 
 
 Manrope and Instrument Serif are self-hosted from [Google Fonts](https://github.com/google/fonts). Their SIL Open Font License files are included in `public/fonts/`.
 
-The Dienstplan icon is the existing project asset `public/Logo.svg`. Grounds artwork and wordmark come from the existing `groundsgg/grounds-landing` repository (`public/assets/ruins-bg.webp` and `public/assets/wordmark.webp`). No external font or image service is needed at runtime.
+The Dienstplan icon is the existing project asset `public/Logo.svg`. Grounds game-world artwork and the full-colour logo come from the existing `groundsgg/grounds-landing` repository (`public/assets/ruins-bg.webp` and `public/assets/hero-logo.webp`). No external font or image service is needed at runtime.
+
+The original smartphone images in `public/screenshots/` come from the developer’s [published App Store listing](https://apps.apple.com/de/app/dienstplan-polizei/id6748340130). They are the store assets, not recreated app interfaces.

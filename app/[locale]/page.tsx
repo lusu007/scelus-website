@@ -6,8 +6,7 @@ import {
   HiArrowUpRight,
   HiOutlineLifebuoy,
 } from "react-icons/hi2";
-import { BrandMark } from "@/components/Brand";
-import CalendarPreview from "@/components/CalendarPreview";
+import AppScreenshots from "@/components/AppScreenshots";
 import { getTranslations } from "@/i18n/translations";
 import { getPortalCopy } from "@/i18n/portal";
 import type { Locale } from "@/i18n/config";
@@ -85,7 +84,7 @@ export default async function HomePage({
                   <span className="platform-label">iOS & Android</span>
                 </div>
                 <h3>{dienstplan.detail}</h3>
-                <CalendarPreview locale={locale} />
+                <AppScreenshots locale={locale} />
               </div>
               <div className="project-caption">
                 <span>{dienstplan.category}</span>
@@ -152,10 +151,10 @@ export default async function HomePage({
                     {locale === "de" ? "Weitergedacht." : "Reimagined."}
                   </span>
                   <Image
-                    src="/grounds-wordmark.webp"
+                    src="/grounds-logo.webp"
                     alt="Grounds"
-                    width={440}
-                    height={130}
+                    width={1280}
+                    height={524}
                     className="grounds-wordmark"
                   />
                   <p>{grounds.detail}</p>
@@ -197,40 +196,6 @@ export default async function HomePage({
                 </a>
               </div>
             </article>
-          </div>
-        </section>
-        <section
-          id="about"
-          className="about-section"
-          aria-labelledby="about-heading"
-        >
-          <div className="container about-grid">
-            <div className="about-title">
-              <BrandMark className="about-mark" />
-              <h2 id="about-heading">{t.about.title}</h2>
-            </div>
-            <div className="about-copy">
-              <p className="about-lead">{t.about.text}</p>
-              <p>{t.about.second}</p>
-              <div className="about-person">
-                <span className="person-initials" aria-hidden="true">
-                  LJ
-                </span>
-                <div>
-                  <strong>{t.about.signature}</strong>
-                  <span>{t.about.role}</span>
-                </div>
-                <a
-                  href="https://github.com/lusu007"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t.about.action}
-                >
-                  <FaGithub aria-hidden="true" />
-                  <HiArrowUpRight aria-hidden="true" />
-                </a>
-              </div>
-            </div>
           </div>
         </section>
         <section

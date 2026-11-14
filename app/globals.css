@@ -284,7 +284,7 @@ section[id] {
 }
 .projects-section {
   padding-top: 36px;
-  padding-bottom: 112px;
+  padding-bottom: 72px;
   border-top: 1px solid var(--line);
 }
 .section-intro {
@@ -349,163 +349,44 @@ section[id] {
   font-weight: 500;
   margin-top: 17px;
 }
-.calendar-composition {
-  position: relative;
-  width: 100%;
-  height: 310px;
-  margin-top: 25px;
+.app-screenshots {
+  margin: 20px 0 0;
 }
-.calendar-sheet {
-  position: relative;
-  margin-left: 9%;
-  width: 75%;
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px;
-  transform: rotate(-7deg);
-  box-shadow: 0 18px 38px -16px #253e7855;
-  color: #26344b;
-}
-.calendar-heading {
+.app-screenshots-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 15px;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-.calendar-heading > span:last-child {
-  display: flex;
-  gap: 12px;
-}
-.calendar-heading svg {
-  width: 13px;
-  height: 13px;
-}
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
-  text-align: center;
-  font-size: 11px;
-  font-variant-numeric: tabular-nums;
-}
-.weekday {
-  color: #627084;
-  padding-bottom: 8px;
-  font-size: 9px;
-}
-.calendar-day {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 3px;
-  height: 23px;
-  border-radius: 5px;
+  align-items: flex-start;
+  gap: 16px;
 }
-.calendar-day i {
-  width: 3px;
-  height: 3px;
-  background: currentColor;
-  border-radius: 50%;
-}
-.shift-early {
-  background: #dfeafb;
-  color: #2950a0;
-}
-.shift-late {
-  background: #e7e1f5;
-  color: #685092;
-}
-.selected-day {
-  background: #284ec7;
-  color: #fff;
-}
-.calendar-legend {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  margin-top: 15px;
-  font-size: 9px;
-  color: #526178;
-}
-.calendar-legend span {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.calendar-legend i {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-}
-.early-dot {
-  background: #7e9dd9;
-}
-.late-dot {
-  background: #9b83bd;
-}
-.free-dot {
-  background: #c1c9d2;
-}
-.shift-note {
-  position: absolute;
-  bottom: 70px;
-  right: -5px;
-  display: flex;
-  gap: 12px;
-  padding: 16px 22px 16px 15px;
-  border-radius: 10px;
-  transform: rotate(4deg);
-  background: #fff;
-  color: #26344b;
-  box-shadow: 0 10px 28px -12px #253e7850;
-}
-.shift-note-icon {
-  display: grid;
-  place-items: center;
-  width: 37px;
-  height: 37px;
-  margin-block: auto;
+.app-screenshots-row a {
+  display: block;
+  width: min(42%, 150px);
+  cursor: zoom-in;
   border-radius: 9px;
-  background: #e6edff;
-  color: #294cc9;
+  overflow: hidden;
+  box-shadow: 0 10px 24px -12px #20355680;
 }
-.shift-note-icon svg {
-  width: 21px;
-  height: 21px;
+.app-screenshots-row img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.shift-note > div {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+.app-screenshots-row a:hover {
+  outline: 2px solid #294cc9;
+  outline-offset: 4px;
 }
-.shift-note > div > span {
-  font-size: 9px;
-  color: #526178;
-}
-.shift-note strong {
-  font-size: 15px;
-  font-weight: 700;
-}
-.shift-note small {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.app-screenshots figcaption {
+  margin-top: 10px;
+  text-align: center;
   font-size: 10px;
-  color: #526178;
-}
-.shift-note small svg {
-  width: 11px;
-  height: 11px;
-}
-.preview-caption {
-  position: absolute;
-  top: 245px;
-  left: 0;
-  font-size: 9px;
   color: #4b5d85;
+}
+.dienstplan-stage {
+  height: 520px;
+  min-height: 520px;
+}
+.grounds-stage {
+  height: 520px;
 }
 .grounds-stage {
   background: #1a2532;
@@ -541,9 +422,9 @@ section[id] {
   font-weight: 500;
 }
 .grounds-wordmark {
-  width: 85%;
+  width: 100%;
   height: auto;
-  max-height: 130px;
+  max-height: 190px;
   object-fit: contain;
 }
 .grounds-stage-content p {
@@ -650,89 +531,9 @@ section[id] {
 .source-link span {
   font-size: 11px;
 }
-.about-section {
-  background: #eef0e8;
-  padding-block: 96px;
-}
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.08fr;
-  gap: 100px;
-}
-.about-mark {
-  width: 60px;
-  height: 60px;
-  color: var(--blue);
-  margin-bottom: 30px;
-}
-.about-title h2 {
-  max-width: 10ch;
-  font-size: 49px;
-  line-height: 1.18;
-  font-weight: 500;
-  letter-spacing: -0.035em;
-}
-.about-copy {
-  padding-top: 8px;
-}
-.about-copy p {
-  color: #62685d;
-  font-size: 14px;
-  line-height: 1.9;
-}
-.about-copy .about-lead {
-  color: var(--ink);
-  font-size: 21px;
-  line-height: 1.65;
-  margin-bottom: 20px;
-  letter-spacing: -0.015em;
-}
-.about-person {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  margin-top: 32px;
-  padding-top: 25px;
-  border-top: 1px solid #d4d9cc;
-}
-.person-initials {
-  display: grid;
-  place-items: center;
-  width: 43px;
-  height: 43px;
-  border: 1px solid #bac4af;
-  border-radius: 50%;
-  font-size: 13px;
-}
-.about-person > div {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.about-person strong {
-  font-size: 13px;
-  font-weight: 600;
-}
-.about-person div span {
-  font-size: 11px;
-  color: #62685d;
-}
-.about-person a {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-left: auto;
-  padding: 10px;
-}
-.about-person a svg {
-  width: 18px;
-  height: 18px;
-}
-.about-person a:hover {
-  color: var(--blue);
-}
 .contact-section {
-  padding-block: 108px 95px;
+  padding-block: 72px 95px;
+  border-top: 1px solid var(--line);
 }
 .contact-top {
   display: flex;
@@ -1029,23 +830,6 @@ section[id] {
   .dienstplan-stage > h3 {
     font-size: 23px;
   }
-  .calendar-sheet {
-    width: 82%;
-    margin-left: 4%;
-  }
-  .calendar-composition {
-    height: 280px;
-  }
-  .shift-note {
-    right: -7px;
-    bottom: 66px;
-  }
-  .preview-caption {
-    top: 228px;
-  }
-  .calendar-sheet {
-    padding: 17px;
-  }
   .source-link span {
     display: none;
   }
@@ -1054,9 +838,6 @@ section[id] {
   }
   .project-actions {
     gap: 10px 16px;
-  }
-  .about-grid {
-    gap: 64px;
   }
   .contact-top h2 {
     font-size: 37px;
@@ -1153,7 +934,7 @@ section[id] {
   }
   .projects-section {
     padding-top: 28px;
-    padding-bottom: 66px;
+    padding-bottom: 48px;
   }
   .section-intro {
     display: block;
@@ -1179,26 +960,6 @@ section[id] {
   }
   .dienstplan-stage > h3 {
     font-size: 25px;
-  }
-  .calendar-composition {
-    max-width: 420px;
-    margin-inline: auto;
-    height: 280px;
-  }
-  .calendar-sheet {
-    width: 77%;
-    margin-left: 5%;
-    padding: 20px;
-  }
-  .calendar-heading {
-    font-size: 14px;
-  }
-  .shift-note {
-    right: 0;
-    bottom: 58px;
-  }
-  .preview-caption {
-    top: 229px;
   }
   .project-caption {
     margin-top: 20px;
@@ -1233,44 +994,8 @@ section[id] {
   .source-link span {
     font-size: 10px;
   }
-  .about-section {
-    padding-block: 58px;
-  }
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  .about-title {
-    display: flex;
-    align-items: center;
-    gap: 26px;
-  }
-  .about-mark {
-    width: 52px;
-    height: 52px;
-    margin: 0;
-  }
-  .about-title h2 {
-    font-size: 35px;
-    max-width: 10ch;
-  }
-  .about-copy {
-    padding: 0;
-  }
-  .about-copy .about-lead {
-    font-size: 18px;
-  }
-  .about-copy p {
-    font-size: 13px;
-  }
-  .about-person {
-    margin-top: 26px;
-  }
-  .about-person div span {
-    font-size: 10px;
-  }
   .contact-section {
-    padding-block: 62px 60px;
+    padding-block: 48px 60px;
   }
   .contact-top {
     display: block;
@@ -1345,18 +1070,6 @@ section[id] {
   .dienstplan-stage {
     padding: 22px 18px;
   }
-  .calendar-sheet {
-    padding: 15px;
-  }
-  .calendar-grid {
-    gap: 4px;
-  }
-  .preview-caption {
-    top: 220px;
-  }
-  .shift-note {
-    bottom: 65px;
-  }
   .source-link span {
     display: none;
   }
@@ -1379,5 +1092,33 @@ section[id] {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .dienstplan-stage,
+  .grounds-stage {
+    min-height: 480px;
+    height: 480px;
+  }
+  .app-screenshots-row a {
+    width: min(42%, 132px);
+  }
+}
+@media (max-width: 760px) {
+  .dienstplan-stage {
+    height: auto;
+    min-height: 0;
+    padding-bottom: 22px;
+  }
+  .grounds-stage {
+    height: 390px;
+  }
+  .app-screenshots-row {
+    gap: 12px;
+  }
+  .app-screenshots-row a {
+    width: 46%;
+    max-width: 175px;
   }
 }

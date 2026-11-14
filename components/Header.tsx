@@ -18,7 +18,6 @@ export default function Header({ locale }: HeaderProps) {
   const menuButton = useRef<HTMLButtonElement>(null);
   const links = [
     ["projects", t.nav.projects],
-    ["about", t.nav.about],
     ["contact", t.nav.contact],
   ];
   return (

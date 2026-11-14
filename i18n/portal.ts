@@ -3,7 +3,6 @@ import type { Locale } from "./config";
 const de = {
   nav: {
     projects: "Projekte",
-    about: "Über Scelus",
     contact: "Kontakt",
     menu: "Menü",
     skip: "Zum Inhalt",
@@ -28,12 +27,12 @@ const de = {
       description:
         "Mehr Überblick über deine Schichten. Und mehr Zeit für alles dazwischen. Mit Dienstplänen, Partnerschichten und Ferien in einer App.",
       detail: "Dein Dienst. Dein Überblick.",
-      calendar: "November 2026",
-      weekdays: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
-      today: "Dein nächster Dienst",
-      shift: "Frühdienst",
-      shiftTime: "06:00 – 14:00",
-      label: "Illustrative App-Ansicht",
+      screenshotCalendar:
+        "Dienstplan auf dem Smartphone: Kalender und Dienste im Überblick",
+      screenshotSettings:
+        "Dienstplan auf dem Smartphone: Einstellungen und Partnerschichten",
+      screenshotOpen: "Screenshot in voller Größe öffnen",
+      screenshotSource: "App-Ansichten aus dem Store",
       features: [
         "Partnerschichten",
         "Ferien & Feiertage",
@@ -51,15 +50,6 @@ const de = {
       action: "Grounds entdecken",
       imageAlt: "Eine Minecraft-Spielwelt aus dem Grounds-Projekt",
     },
-  },
-  about: {
-    title: "Neugier ist der Anfang.",
-    text: "Hinter Scelus steht Lukas Jost. Hier finden eigene Softwareprojekte ein gemeinsames Zuhause – von einer App für die Dienstplanung bis zu einer Plattform für Minecraft.",
-    second:
-      "Die Themen sind unterschiedlich. Was sie verbindet: Ideen ausprobieren, Lösungen entwickeln und sie für andere nutzbar machen.",
-    signature: "Lukas Jost",
-    role: "Der Entwickler hinter Scelus",
-    action: "Auf GitHub kennenlernen",
   },
   contact: {
     title: "Eine Idee? Eine Frage?",
@@ -87,7 +77,6 @@ export type PortalCopy = Widen<typeof de>;
 const en: PortalCopy = {
   nav: {
     projects: "Projects",
-    about: "About Scelus",
     contact: "Contact",
     menu: "Menu",
     skip: "Skip to content",
@@ -112,12 +101,12 @@ const en: PortalCopy = {
       description:
         "A clearer view of your shifts. More time for everything in between. Your schedule, your partner’s shifts and school holidays in one app.",
       detail: "Your shifts. At a glance.",
-      calendar: "November 2026",
-      weekdays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-      today: "Your next shift",
-      shift: "Early shift",
-      shiftTime: "06:00 – 14:00",
-      label: "Illustrative app view",
+      screenshotCalendar:
+        "Dienstplan on a smartphone: calendar and shifts (German interface)",
+      screenshotSettings:
+        "Dienstplan on a smartphone: settings and partner shifts (German interface)",
+      screenshotOpen: "Open full-size screenshot",
+      screenshotSource: "App views from the store",
       features: [
         "Partner shifts",
         "School & public holidays",
@@ -135,15 +124,6 @@ const en: PortalCopy = {
       action: "Discover Grounds",
       imageAlt: "A Minecraft game world from the Grounds project",
     },
-  },
-  about: {
-    title: "It starts with curiosity.",
-    text: "Scelus is built by Lukas Jost. It brings independent software projects together, from a shift-planning app to a platform for Minecraft.",
-    second:
-      "The subjects vary. The approach stays the same: try ideas, build solutions and make them useful to others.",
-    signature: "Lukas Jost",
-    role: "The developer behind Scelus",
-    action: "Meet me on GitHub",
   },
   contact: {
     title: "An idea? A question?",
