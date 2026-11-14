@@ -9,8 +9,8 @@ const de = {
     label: "Hauptnavigation",
   },
   hero: {
-    first: "Gute Ideen.",
-    second: "Echte Software.",
+    first: "Kleine Ideen.",
+    second: "Weitergedacht.",
     description:
       "Apps, Tools und digitale Welten. Scelus Development ist das Zuhause für Software, die aus eigenen Ideen entsteht und im Alltag etwas bewegt.",
     action: "Projekte entdecken",
@@ -24,7 +24,7 @@ const de = {
       category: "Mobile App",
       title: "Dienstplan – Polizei",
       description:
-        "Mehr Überblick über deine Schichten. Und mehr Zeit für alles dazwischen. Mit Dienstplänen, Partnerschichten und Ferien in einer App.",
+        "Mehr Überblick über deine Schichten. Und mehr Zeit für alles dazwischen. Mit Dienstplänen, eigenen Diensten und Terminen, Partnerschichten und Ferien in einer App.",
       detail: "Dein Dienst. Dein Überblick.",
       screenshotCalendar:
         "Dienstplan im Dark Mode: Kalender und Dienste im Überblick",
@@ -82,8 +82,8 @@ const en: PortalCopy = {
     label: "Main navigation",
   },
   hero: {
-    first: "Good ideas.",
-    second: "Real software.",
+    first: "Small ideas.",
+    second: "Taken further.",
     description:
       "Apps, tools and digital worlds. Scelus Development is a home for software born from personal ideas and built to make a difference in everyday life.",
     action: "Explore the projects",
@@ -97,7 +97,7 @@ const en: PortalCopy = {
       category: "Mobile app",
       title: "Dienstplan – Polizei",
       description:
-        "A clearer view of your shifts. More time for everything in between. Your schedule, your partner’s shifts and school holidays in one app.",
+        "A clearer view of your shifts. More time for everything in between. Shift schedules, custom shifts and events, your partner’s shifts and school holidays in one app.",
       detail: "Your shifts. At a glance.",
       screenshotCalendar:
         "Dienstplan in dark mode: calendar and shifts (German interface)",

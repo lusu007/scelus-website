@@ -164,7 +164,7 @@ export default async function HomePage({
               </a>
               <div className="project-caption">
                 <span>{grounds.category}</span>
-                <span>grounds.gg</span>
+                <span>Kotlin · Quarkus · React</span>
               </div>
               <h3 className="project-title">{grounds.title}</h3>
               <p className="project-description">{grounds.description}</p>
