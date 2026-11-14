@@ -32,7 +32,7 @@ const de = {
       screenshotSettings:
         "Dienstplan auf dem Smartphone: Einstellungen und Partnerschichten",
       screenshotOpen: "Screenshot in voller Größe öffnen",
-      screenshotSource: "App-Ansichten aus dem Store",
+      screenshotSource: "Kalender & Einstellungen",
       features: [
         "Partnerschichten",
         "Ferien & Feiertage",
@@ -106,7 +106,7 @@ const en: PortalCopy = {
       screenshotSettings:
         "Dienstplan on a smartphone: settings and partner shifts (German interface)",
       screenshotOpen: "Open full-size screenshot",
-      screenshotSource: "App views from the store",
+      screenshotSource: "Calendar & settings",
       features: [
         "Partner shifts",
         "School & public holidays",

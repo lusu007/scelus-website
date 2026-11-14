@@ -9,16 +9,19 @@ export default function AppScreenshots({ locale }: { locale: Locale }) {
       <div className="app-screenshots-row">
         {[
           {
-            src: "/screenshots/dienstplan-calendar.jpg",
+            src: "/screenshots/dienstplan-calendar.png",
             alt: t.screenshotCalendar,
           },
           {
-            src: "/screenshots/dienstplan-settings.jpg",
+            src: "/screenshots/dienstplan-settings.png",
             alt: t.screenshotSettings,
           },
-        ].map((shot) => (
+        ].map((shot, index) => (
           <a
             key={shot.src}
+            className={
+              index === 0 ? "screenshot-primary" : "screenshot-secondary"
+            }
             href={shot.src}
             target="_blank"
             rel="noopener noreferrer"
@@ -27,8 +30,8 @@ export default function AppScreenshots({ locale }: { locale: Locale }) {
             <Image
               src={shot.src}
               alt={shot.alt}
-              width={1240}
-              height={2688}
+              width={1080}
+              height={2400}
               sizes="(max-width: 760px) 40vw, 210px"
             />
           </a>

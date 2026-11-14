@@ -31,7 +31,7 @@ The locale header uses Edge Middleware because the installed Cloudflare adapter 
 - `app/[locale]/`: portfolio, support, imprint and privacy pages.
 - `app/globals.css`: shared responsive design tokens and styles.
 - `components/Brand.tsx`: Scelus wordmark and geometric brand mark.
-- `components/AppScreenshots.tsx`: original smartphone screenshots from the published store listing, with links to full-size images.
+- `components/AppScreenshots.tsx`: screenshots captured directly from the current Android app in an emulator, with links to full-size images.
 
 Support opens a draft in the visitor's email app; it does not send email from a server. Entries are retained, and the interface never claims successful delivery.
 
@@ -41,4 +41,4 @@ Manrope and Instrument Serif are self-hosted from [Google Fonts](https://github.
 
 The Dienstplan icon is the existing project asset `public/Logo.svg`. Grounds game-world artwork and the full-colour logo come from the existing `groundsgg/grounds-landing` repository (`public/assets/ruins-bg.webp` and `public/assets/hero-logo.webp`). No external font or image service is needed at runtime.
 
-The original smartphone images in `public/screenshots/` come from the developer’s [published App Store listing](https://apps.apple.com/de/app/dienstplan-polizei/id6748340130). They are the store assets, not recreated app interfaces.
+The PNG screenshots in `public/screenshots/` were captured directly with Android `screencap` on a Pixel 6 Android 15 / API 35 emulator. They show the current light UI with a demo ESD roster (group 2, partner group 3). The app is the original `dienstplan-v0.19.2-prod-90.apk` from [release v0.19.2](https://github.com/lusu007/dienstplan/releases/tag/v0.19.2), built from commit `b43bcf87ed514b20cd6c032b2c11fc89ee2670a9`, which matched the app repository's main commit at capture time. APK SHA-256: `808765db54cb62d24236333e26729e9244158d78e22aa65b78b1a4dcb6a96070`. The app interface was not recreated or edited.
