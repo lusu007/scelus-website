@@ -31,6 +31,7 @@ const de = {
       screenshotSettings:
         "Dienstplan im Dark Mode: Einstellungen und Partnerschichten",
       screenshotOpen: "Screenshot in voller Größe öffnen",
+      screenshotClose: "Screenshot schließen",
       screenshotSource: "Kalender & Einstellungen",
       features: [
         "Partnerschichten",
@@ -104,6 +105,7 @@ const en: PortalCopy = {
       screenshotSettings:
         "Dienstplan in dark mode: settings and partner shifts (German interface)",
       screenshotOpen: "Open full-size screenshot",
+      screenshotClose: "Close screenshot",
       screenshotSource: "Calendar & settings",
       features: [
         "Partner shifts",

@@ -1,32 +1,15 @@
+import Image from "next/image";
+
 export function BrandMark({ className = "" }: { className?: string }) {
   return (
-    <svg
-      className={className}
-      viewBox="0 0 64 64"
-      fill="none"
+    <Image
+      className={`brand-mark ${className}`.trim()}
+      src="/scelus-logo.svg"
+      width={64}
+      height={64}
+      alt=""
       aria-hidden="true"
-    >
-      <path
-        d="M31 6H43L60 23V41L43 58H31V47H38L49 36V28L38 17H31Z"
-        fill="var(--brand-light, #83a5ff)"
-      />
-      <path
-        d="M41 6H19L4 21V29L18 43H31L35 47H14L4 58H35L48 45V37L34 23H21L17 19L21 15H41Z"
-        fill="currentColor"
-      />
-      <path
-        d="M4 21L18 35H34L48 45V37L34 23H21L17 19L21 15H19Z"
-        fill="var(--brand-mid, #3c66e4)"
-      />
-      <path
-        d="M49 28L60 23V41L43 58H31L38 47L49 36Z"
-        fill="var(--brand-deep, #17369e)"
-      />
-      <path
-        d="M18 35L4 21V29L18 43H31L35 47L39 43L31 35Z"
-        fill="var(--brand-fold, #1c3baf)"
-      />
-    </svg>
+    />
   );
 }
 

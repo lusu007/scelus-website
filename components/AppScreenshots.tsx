@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { HiXMark } from "react-icons/hi2";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import type { Locale } from "@/i18n/config";
@@ -13,6 +14,25 @@ export default function AppScreenshots({ locale }: { locale: Locale }) {
   const t = getPortalCopy(locale).projects.dienstplan;
   const deckRef = useRef<HTMLDivElement>(null);
   const requestFront = useRef<((index: number) => void) | null>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const screenshots = [
+    {
+      src: "/screenshots/dienstplan-calendar-dark.png",
+      alt: t.screenshotCalendar,
+    },
+    {
+      src: "/screenshots/dienstplan-settings-dark.png",
+      alt: t.screenshotSettings,
+    },
+  ];
+  const activeScreenshot = screenshots[activeIndex ?? 0];
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    // Commit the selected image and its accessible description before moving focus.
+    if (activeIndex !== null && dialog && !dialog.open) dialog.showModal();
+  }, [activeIndex]);
 
   useGSAP(
     (_, contextSafe) => {
@@ -146,16 +166,7 @@ export default function AppScreenshots({ locale }: { locale: Locale }) {
   return (
     <figure className="app-screenshots">
       <div className="app-screenshots-row" ref={deckRef}>
-        {[
-          {
-            src: "/screenshots/dienstplan-calendar-dark.png",
-            alt: t.screenshotCalendar,
-          },
-          {
-            src: "/screenshots/dienstplan-settings-dark.png",
-            alt: t.screenshotSettings,
-          },
-        ].map((shot, index) => (
+        {screenshots.map((shot, index) => (
           <a
             key={shot.src}
             className={
@@ -169,8 +180,19 @@ export default function AppScreenshots({ locale }: { locale: Locale }) {
                 requestFront.current?.(index);
             }}
             href={shot.src}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={(event) => {
+              if (
+                event.ctrlKey ||
+                event.metaKey ||
+                event.shiftKey ||
+                event.altKey ||
+                event.button !== 0
+              )
+                return;
+              event.preventDefault();
+              setActiveIndex(index);
+            }}
+            aria-haspopup="dialog"
             aria-label={`${shot.alt}. ${t.screenshotOpen}`}
           >
             <span className="screenshot-card">
@@ -186,6 +208,50 @@ export default function AppScreenshots({ locale }: { locale: Locale }) {
         ))}
       </div>
       <figcaption>{t.screenshotSource}</figcaption>
+      <dialog
+        ref={dialogRef}
+        className="screenshot-dialog"
+        aria-labelledby="screenshot-preview-title"
+        aria-describedby="screenshot-preview-caption"
+        onClose={() => setActiveIndex(null)}
+        onClick={(event) => {
+          if (event.target !== event.currentTarget) return;
+          const bounds = event.currentTarget.getBoundingClientRect();
+          if (
+            event.clientX < bounds.left ||
+            event.clientX > bounds.right ||
+            event.clientY < bounds.top ||
+            event.clientY > bounds.bottom
+          ) {
+            event.currentTarget.close();
+          }
+        }}
+      >
+        <div className="screenshot-dialog-toolbar">
+          <p id="screenshot-preview-title">{t.title}</p>
+          <button
+            type="button"
+            onClick={() => dialogRef.current?.close()}
+            aria-label={t.screenshotClose}
+          >
+            <HiXMark aria-hidden="true" />
+          </button>
+        </div>
+        <Image
+          className="screenshot-expanded"
+          src={activeScreenshot.src}
+          alt={activeScreenshot.alt}
+          width={1080}
+          height={2400}
+          sizes="(max-width: 520px) 80vw, 400px"
+        />
+        <p
+          id="screenshot-preview-caption"
+          className="screenshot-dialog-caption"
+        >
+          {activeScreenshot.alt}
+        </p>
+      </dialog>
     </figure>
   );
 }

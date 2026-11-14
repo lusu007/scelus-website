@@ -117,11 +117,10 @@ section[id] {
   letter-spacing: -0.04em;
   line-height: 1;
 }
-.brand svg {
+.brand-mark {
   width: 46px;
   height: 46px;
   flex-shrink: 0;
-  color: var(--blue);
 }
 .brand-copy {
   display: grid;
@@ -413,6 +412,76 @@ section[id] {
   font-size: 10px;
   color: #4b5d85;
 }
+html:has(.screenshot-dialog[open]) {
+  overflow: hidden;
+}
+.screenshot-dialog {
+  width: min(480px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 16px 20px 20px;
+  border: 1px solid #ffffff26;
+  border-radius: 16px;
+  background: #212a24;
+  color: #f5f6ef;
+  box-shadow: 0 24px 80px #10181166;
+}
+.screenshot-dialog::backdrop {
+  background: #111a18d9;
+}
+.screenshot-dialog-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.screenshot-dialog-toolbar button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #bbc4b7;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.screenshot-dialog-toolbar button:hover {
+  background: #ffffff18;
+}
+.screenshot-dialog-toolbar svg {
+  width: 24px;
+  height: 24px;
+}
+.screenshot-expanded {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 200px);
+  margin-inline: auto;
+  border-radius: 10px;
+}
+.screenshot-dialog-caption {
+  margin-top: 16px;
+  color: #bbc4b7;
+  font-size: 12px;
+  line-height: 1.6;
+}
+@media (max-height: 600px) {
+  .screenshot-expanded {
+    width: min(100%, 320px);
+    max-height: none;
+  }
+  .screenshot-dialog-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #212a24;
+  }
+}
 .dienstplan-stage {
   height: 560px;
   min-height: 560px;
@@ -654,13 +723,6 @@ section[id] {
   color: #f5f6ef;
   padding-top: 48px;
 }
-.site-footer .brand svg {
-  color: #b4c2a6;
-  --brand-light: #e0e8d6;
-  --brand-mid: #cad7bb;
-  --brand-deep: #7f9673;
-  --brand-fold: #92a783;
-}
 .footer-main {
   display: flex;
   justify-content: space-between;
@@ -896,7 +958,7 @@ section[id] {
   .brand-descriptor {
     font-size: 11px;
   }
-  .brand svg {
+  .brand-mark {
     width: 40px;
     height: 40px;
   }
