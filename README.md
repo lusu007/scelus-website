@@ -20,7 +20,11 @@ npx tsc --noEmit
 npm run build
 ```
 
-`npm run preview` builds and previews the Cloudflare Worker locally. `npm run deploy` publishes through the existing OpenNext configuration. Deployment settings are in `wrangler.jsonc` and `open-next.config.ts`.
+`npm run build` creates the Next.js output and the Cloudflare Worker at `.open-next/worker.js`, including its static assets. OpenNext calls the separate `npm run build:next` script internally to avoid recursively invoking itself.
+
+For Cloudflare Workers Builds, use `npm run build` as the build command. The production deploy command can remain `npx wrangler deploy`; non-production branches can use `npx wrangler versions upload`. Running only `next build` does not generate the Worker entry point.
+
+`npm run preview` builds and previews the Cloudflare Worker locally. `npm run deploy` builds and publishes through the existing OpenNext configuration. Deployment settings are in `wrangler.jsonc` and `open-next.config.ts`.
 
 The locale header uses Edge Middleware because the installed Cloudflare adapter does not support Node.js Middleware / Proxy. Next.js 16 emits a deprecation notice for this compatible path.
 
