@@ -1,141 +1,52 @@
-# Dienstplan App Website
+# Scelus Development
 
-A modern, multi-language landing page for the Dienstplan App, built with Next.js and deployed on Cloudflare Pages.
+The bilingual project portfolio for [scelus.io](https://scelus.io), built with Next.js 16, React 19, TypeScript and Tailwind CSS 4. Hosted on Cloudflare Workers through OpenNext.
 
-## Features
+## Local development
 
-- 🌍 Multi-language support (German/English)
-- 📱 Responsive design
-- 🎨 Modern UI matching the app's branding
-- ⚡ Static site generation for fast loading
-- 🔗 App Store links (iOS & Android)
+Requires Node.js 24 or later.
 
-## Tech Stack
-
-- **Next.js 16** - React framework with static export
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Utility-first CSS framework
-- **Cloudflare Pages** - Hosting platform
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ and npm/yarn/pnpm
-
-### Installation
-
-1. Install dependencies:
-
-```bash
-npm install
-```
-
-2. Run the development server:
-
-```bash
+```sh
+npm ci
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open `/de/` or `/en/`. The root route redirects to the default German version.
 
-### Build for Production
+## Validation and Cloudflare
 
-```bash
+```sh
+npx tsc --noEmit
 npm run build
 ```
 
-This will generate a static site in the `out` directory, ready for deployment.
+`npm run build` creates the Next.js output and the Cloudflare Worker at `.open-next/worker.js`, including its static assets. OpenNext calls the separate `npm run build:next` script internally to avoid recursively invoking itself.
 
-## Deployment on Cloudflare Pages
+For Cloudflare Workers Builds, use `npm run build` as the build command. The production deploy command can remain `npx wrangler deploy`; non-production branches can use `npx wrangler versions upload`. Running only `next build` does not generate the Worker entry point.
 
-### Option 1: Connect via Git (Recommended)
+`npm run preview` builds and previews the Cloudflare Worker locally. `npm run deploy` builds and publishes through the existing OpenNext configuration. Deployment settings are in `wrangler.jsonc` and `open-next.config.ts`.
 
-1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
-2. Go to Cloudflare Dashboard → Pages → Create a project
-3. Connect your repository
-4. Configure build settings:
-   - **Build command**: `npm run build`
-   - **Build output directory**: `out`
-   - **Node version**: `18` or higher
-5. Deploy!
+The locale header uses Edge Middleware because the installed Cloudflare adapter does not support Node.js Middleware / Proxy. Next.js 16 emits a deprecation notice for this compatible path.
 
-### Option 2: Deploy via Wrangler CLI
+## Content and design
 
-1. Install Wrangler CLI:
+- `i18n/portal.ts`: German and English portfolio copy.
+- `messages/`: shared and existing legal translation content.
+- `app/[locale]/`: portfolio, support, imprint and privacy pages.
+- `app/globals.css`: shared responsive design tokens and styles.
+- `components/Brand.tsx`: complete Scelus Development wordmark and geometric brand mark.
+- `components/AppScreenshots.tsx`: screenshots captured directly from the current Android app in an emulator, with links to full-size images.
 
-```bash
-npm install -g wrangler
-```
+Support opens a draft in the visitor's email app; it does not send email from a server. Entries are retained, and the interface never claims successful delivery.
 
-2. Login to Cloudflare:
+## Assets
 
-```bash
-wrangler login
-```
+Manrope and Instrument Serif are self-hosted from [Google Fonts](https://github.com/google/fonts). Their SIL Open Font License files are included in `public/fonts/`.
 
-3. Build the project:
+The Dienstplan icon is the existing project asset `public/Logo.svg`. Grounds game-world artwork and the full-colour logo come from the existing `groundsgg/grounds-landing` repository (`public/assets/ruins-bg.webp` and `public/assets/hero-logo.webp`). No external font or image service is needed at runtime.
 
-```bash
-npm run build
-```
+The PNG screenshots in `public/screenshots/` were captured directly with Android `screencap` on a Pixel 6 Android 15 / API 35 emulator. They show the current dark UI with a demo ESD roster (group 2, partner group 3). The app is the original `dienstplan-v0.19.2-prod-90.apk` from [release v0.19.2](https://github.com/lusu007/dienstplan/releases/tag/v0.19.2), built from commit `b43bcf87ed514b20cd6c032b2c11fc89ee2670a9`, which matched the app repository's main commit at capture time. APK SHA-256: `808765db54cb62d24236333e26729e9244158d78e22aa65b78b1a4dcb6a96070`. The app interface was not recreated or edited.
 
-4. Deploy:
+## Screenshot interaction
 
-```bash
-wrangler pages deploy out
-```
-
-### Environment Variables
-
-If you need environment variables, add them in the Cloudflare Pages dashboard under Settings → Environment Variables.
-
-## Project Structure
-
-```
-├── app/                    # Next.js App Router
-│   ├── [locale]/          # Localized routes
-│   │   ├── page.tsx       # Landing page
-│   │   ├── imprint/       # Imprint page
-│   │   ├── privacy/       # Privacy policy page
-│   │   └── support/       # Support page
-│   ├── layout.tsx         # Root layout
-│   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── Header.tsx
-│   ├── Footer.tsx
-│   ├── LanguageSwitcher.tsx
-│   └── AppStoreButtons.tsx
-├── i18n/                  # Internationalization
-│   ├── config.ts
-│   └── translations.ts
-├── messages/              # Translation files
-│   ├── de.json
-│   └── en.json
-├── public/                # Static assets
-│   └── Logo.svg
-└── package.json
-```
-
-## Customization
-
-### Update App Store Links
-
-Edit `components/AppStoreButtons.tsx` and update the `iosUrl` and `androidUrl` props, or pass them as props from the page component.
-
-### Update Content
-
-- Edit translation files in `messages/de.json` and `messages/en.json`
-- Update placeholder content in the page components
-
-### Update Styling
-
-- Colors are defined in `tailwind.config.js` (matching the logo colors)
-- Modify components in the `components/` directory
-- Global styles are in `app/globals.css`
-
-## License
-
-© 2024 Dienstplan App. All rights reserved.
-
-
+The screenshot stack uses a scoped GSAP timeline: the rear screen tilts and moves clear before changing layers, then settles in front. Native link hit areas stay fixed while inner visual layers animate, so clicks work throughout the motion. Rapid hover changes follow the latest requested card after the current shuffle completes. Keyboard focus also brings a screen forward; touch opens the original image directly. Reduced-motion preferences disable the movement.
